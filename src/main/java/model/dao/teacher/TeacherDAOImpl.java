@@ -3,52 +3,55 @@ package model.dao.teacher;
 import java.util.List;
 
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import org.hibernate.cfg.Configuration;
-import org.hibernate.service.ServiceRegistry;
 
 import model.entity.teacher.Teacher;
+import model.factory.connection.ConnectionFactory;
 
-public class TeacherDAOImpl implements TeacherDAO{
+public class TeacherDAOImpl implements TeacherDAO {
+
+	private ConnectionFactory factory;
+
+	public TeacherDAOImpl() {
+		factory = new ConnectionFactory();
+	}
 
 	public void insertTeaher(Teacher teacher) {
-		
-		Session sessao = null;
+
+		Session session = null;
 
 		try {
 
-			sessao = connectDatabase().openSession();
-			sessao.beginTransaction();
+			session = factory.getConnection().openSession();
+			session.beginTransaction();
 
-			sessao.save(teacher);
+			session.save(teacher);
 
-			sessao.getTransaction().commit();
+			session.getTransaction().commit();
 
 		} catch (Exception sqlException) {
 
 			sqlException.printStackTrace();
 
-			if (sessao.getTransaction() != null) {
-				sessao.getTransaction().rollback();
+			if (session.getTransaction() != null) {
+				session.getTransaction().rollback();
 			}
 
 		} finally {
 
-			if (sessao != null) {
-				sessao.close();
+			if (session != null) {
+				session.close();
 			}
 		}
-		
+
 	}
 
 	public void removeTeacher(Teacher teacher) {
-		
+
 		Session session = null;
 
 		try {
 
-			session = connectDatabase().openSession();
+			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
 			session.remove(teacher);
@@ -69,16 +72,16 @@ public class TeacherDAOImpl implements TeacherDAO{
 				session.close();
 			}
 		}
-		
+
 	}
 
 	public void updateTeacher(Teacher teacher) {
-		
+
 		Session session = null;
 
 		try {
 
-			session = connectDatabase().openSession();
+			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
 			session.update(teacher);
@@ -99,26 +102,11 @@ public class TeacherDAOImpl implements TeacherDAO{
 				session.close();
 			}
 		}
-		
+
 	}
 
 	public List<Teacher> listTeacher() {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-	private SessionFactory connectDatabase() {
-
-		Configuration configuration = new Configuration();
-		configuration.addAnnotatedClass(model.entity.teacher.Teacher.class);
-		configuration.configure("hibernate-cfg.xml");
-
-		ServiceRegistry service = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
-
-		SessionFactory factorySession = configuration.buildSessionFactory(service);
-
-		return factorySession;
-
-	}
-	
 }
