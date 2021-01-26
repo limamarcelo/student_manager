@@ -23,13 +23,7 @@ public class Main {
 
 		TeacherDAO dao = new TeacherDAOImpl();
 
-		//teste
 		
-		
-		String name = "Bruna";
-		String cpf = "992500";
-		String email = "teste.bruna@slaa.oi";
-		String subject = "Direito Constitucional";
 		
 		Teacher teacher = new Teacher(name, cpf, email, subject);
 
