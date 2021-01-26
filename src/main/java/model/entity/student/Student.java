@@ -1,26 +1,50 @@
 package model.entity.student;
 
 import model.entity.course.Course;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
+import model.entity.course.Course;
+
+@Entity
+@Table(name = "student")
 public class Student {
 	
 	//Variables
-	private int id;
-	
-	private String name;
-	
-	private String cpf;
-	
-	private String email;
-	
-	private Course course;
-	
-	private Company company;
-	
-	//Constructors
+		@Id
+		@GeneratedValue(strategy = GenerationType.IDENTITY)
+		@Column(name = "id_student")
+		private Long id;
+		
+		@Column(name = "name_student", length=40, nullable = false, unique = false)
+		private String name;
+		
+		@Column(name = "cpf_student", length = 11, nullable = false, unique = true)
+		private String cpf;
+		
+		@Column(name = "email_student", length = 40, nullable = false, unique = true)
+		private String email;
+		
+		@ManyToOne(fetch = FetchType.LAZY)
+		@JoinColumn(name = "id_course")
+		private Course course;
+		
+		@ManyToOne(fetch = FetchType.LAZY)
+		@JoinColumn(name = "id_company")
+		private Company company;
+
+		
+		//Constructors
 	public Student() {}
 	
-	public Student(int id) {
+	public Student(Long id) {
 		setId(id);
 	}
 	
@@ -32,7 +56,7 @@ public class Student {
 		setCompany(company);
 	}
 	
-	public Student(int id, String name, String cpf, String email, Course course, Company company) {
+	public Student(Long id, String name, String cpf, String email, Course course, Company company) {
 		setId(id);
 		setName(name);
 		setCpf(cpf);
@@ -42,11 +66,11 @@ public class Student {
 	}
 	
 	//Getters & Setters
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
