@@ -14,6 +14,8 @@ public class ConnectionFactory {
 		configuration.addAnnotatedClass(model.entity.teacher.Teacher.class);
 		configuration.addAnnotatedClass(model.entity.course.Course.class);
 		configuration.addAnnotatedClass(model.entity.student.Student.class);
+		configuration.addAnnotatedClass(model.entity.company.Company.class);
+		configuration.addAnnotatedClass(model.entity.subject.Subject.class);
 
 		configuration.configure("hibernate.cfg.xml");
 
