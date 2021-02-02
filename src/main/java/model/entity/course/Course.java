@@ -36,7 +36,7 @@ public class Course {
 	//Constructors
 	public Course() {}
 	
-	public Course(int id) {
+	public Course(Long id) {
 		setId(id);
 	}
 	
@@ -45,7 +45,7 @@ public class Course {
 		setSubject(subject);
 	}
 	
-	public Course(int id, String name, Subject subject) {
+	public Course(Long id, String name, Subject subject) {
 		setId(id);
 		setName(name);
 		setSubject(subject);
@@ -54,7 +54,7 @@ public class Course {
 	
 	//Getters & Setters
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
