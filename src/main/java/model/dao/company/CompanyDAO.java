@@ -2,7 +2,7 @@ package model.dao.company;
 
 
 
-import antlr.collections.List;
+import java.util.List;
 import model.entity.company.Company;
 
 public interface CompanyDAO {
