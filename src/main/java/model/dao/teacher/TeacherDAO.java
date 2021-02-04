@@ -1,6 +1,6 @@
 package model.dao.teacher;
 
-import antlr.collections.List;
+import java.util.List;
 import model.entity.teacher.Teacher;
 
 public interface TeacherDAO {
