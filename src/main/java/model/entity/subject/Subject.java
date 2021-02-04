@@ -14,12 +14,12 @@ import javax.persistence.Table;
 public class Subject implements Serializable {
 
 	
-	private static final long serialVersionUID = 1L;
+	private static final Long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_subject")
-	private long id_subject;
+	private Long id_subject;
 	
 	
 	@Column(name = "name_subject", length = 40, nullable = false, unique = false)
@@ -27,11 +27,11 @@ public class Subject implements Serializable {
 	
 	
 	@Column(name = "teacher_subject")
-	private long teacher_subject;
+	private Long teacher_subject;
 	
 	public Subject() {}
 
-	public Subject(long id_subject, String name_subject, long teacher_subject) {
+	public Subject(Long id_subject, String name_subject, Long teacher_subject) {
 
 		setId_subject(id_subject);
 		setName_subject(name_subject);
@@ -39,18 +39,18 @@ public class Subject implements Serializable {
 
 	}
 
-	public Subject(String name_subject, long teacher_subject) {
+	public Subject(String name_subject, Long teacher_subject) {
 
 		setName_subject(name_subject);
 		setTeacher_subject(teacher_subject);
 
 	}
 
-	public void setId_subject(long id_subject) {
+	public void setId_subject(Long id_subject) {
 		this.id_subject = id_subject;
 	}
 	
-	public long getId_subject() {
+	public Long getId_subject() {
 		return id_subject;
 	}
 
@@ -62,11 +62,11 @@ public class Subject implements Serializable {
 		return name_subject;
 	}
 
-	public void setTeacher_subject(long teacher_subject) {
+	public void setTeacher_subject(Long teacher_subject) {
 		this.teacher_subject = teacher_subject;
 	}
 
-	public long getTeacher_subject() {
+	public Long getTeacher_subject() {
 		return teacher_subject;
 	}
 }
