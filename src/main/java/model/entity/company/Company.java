@@ -13,12 +13,12 @@ import javax.persistence.Table;
 @Table(name = "company")
 public class Company implements Serializable {
 	
-	private static final long serialVersionUID = 1L;
+	private static final Long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_company")
-	private long id_company;
+	private Long id_company;
 
 	@Column(name = "name_company", length = 40, nullable = false, unique = false)
 	private String name_company;
@@ -33,12 +33,12 @@ public class Company implements Serializable {
 	private String address_company;
 	
 	@Column(name = "phone_company", length = 15, nullable = false, unique = false)
-	private long phone_company;
+	private Long phone_company;
 	
 	public Company() {}
 
-	public Company(long id_company, String name_company, String cnpj_company, String email_company,
-			String address_company, long phone_company) {
+	public Company(Long id_company, String name_company, String cnpj_company, String email_company,
+			String address_company, Long phone_company) {
 
 		setId_company(id_company);
 		setName_company(name_company);
@@ -50,7 +50,7 @@ public class Company implements Serializable {
 	}
 
 	public Company(String name_company, String cnpj_company, String email_company, String address_company,
-			long phone_company) {
+			Long phone_company) {
 
 		setName_company(name_company);
 		setCnpj_company(cnpj_company);
@@ -60,11 +60,11 @@ public class Company implements Serializable {
 
 	}
 
-	public long getId_company() {
+	public Long getId_company() {
 		return id_company;
 	}
 
-	public void setId_company(long id_company) {
+	public void setId_company(Long id_company) {
 		this.id_company = id_company;
 	}
 
@@ -100,11 +100,11 @@ public class Company implements Serializable {
 		this.address_company = address_company;
 	}
 
-	public long getPhone_company() {
+	public Long getPhone_company() {
 		return phone_company;
 	}
 
-	public void setPhone_company(long phone_company) {
+	public void setPhone_company(Long phone_company) {
 		this.phone_company = phone_company;
 	}
 }
