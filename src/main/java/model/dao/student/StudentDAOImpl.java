@@ -1,4 +1,4 @@
-package model.dao.company;
+package model.dao.student;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -7,19 +7,19 @@ import javax.persistence.criteria.Root;
 import org.hibernate.Session;
 
 import java.util.List;
-import model.entity.company.Company;
+import model.entity.student.Student;
 import model.factory.connection.ConnectionFactory;
 
 
-public class CompanyDAOImpl implements CompanyDAO {
+public class StudentDAOImpl implements StudentDAO {
 	
 	private ConnectionFactory factory;
 
-	public CompanyDAOImpl() {
+	public StudentDAOImpl() {
 		factory = new ConnectionFactory();
 	}
 	
-	public void insertCompany(Company company) {
+	public void insertStudent(Student student) {
 
 		Session session = null;
 
@@ -28,7 +28,7 @@ public class CompanyDAOImpl implements CompanyDAO {
 			session = factory().openSession();
 			session.beginTransaction();
 
-			session.save(company);
+			session.save(student);
 			
 			session.getTransaction().commit();
 
@@ -49,7 +49,7 @@ public class CompanyDAOImpl implements CompanyDAO {
 
 	}
 
-	public void removeCompany(Company company) {
+	public void removeStudent(Student student) {
 
 		Session session = null;
 
@@ -58,7 +58,7 @@ public class CompanyDAOImpl implements CompanyDAO {
 			session = factory().openSession();
 			session.beginTransaction();
 
-			session.remove(company);
+			session.remove(student);
 
 			session.getTransaction().commit();
 
@@ -79,7 +79,7 @@ public class CompanyDAOImpl implements CompanyDAO {
 
 	}
 
-	public void updateCompany(Company company) {
+	public void updateStudent(Student student) {
 
 		Session session = null;
 
@@ -88,7 +88,7 @@ public class CompanyDAOImpl implements CompanyDAO {
 			session = factory().openSession();
 			session.beginTransaction();
 
-			session.update(company);
+			session.update(student);
 
 			session.getTransaction().commit();
 
@@ -108,10 +108,10 @@ public class CompanyDAOImpl implements CompanyDAO {
 		}
 	}
 
-	public List<Company> listCompany() {
+	public List<Student> listStudent() {
 
 		Session session = null;
-		List<Company> company = null;
+		List<Student> student = null;
 
 		try {
 
@@ -120,12 +120,12 @@ public class CompanyDAOImpl implements CompanyDAO {
 
 			CriteriaBuilder construtor = session.getCriteriaBuilder();
 
-			CriteriaQuery<Company> criteria = construtor.createQuery(Company.class);
-			Root<Company> raizCliente = criteria.from(Company.class);
+			CriteriaQuery<Student> criteria = construtor.createQuery(Student.class);
+			Root<Student> raizCliente = criteria.from(Student.class);
 
 			criteria.select(raizCliente);
 
-			company = session.createQuery(criteria).getResultList();
+			student = session.createQuery(criteria).getResultList();
 
 			session.getTransaction().commit();
 
@@ -144,7 +144,7 @@ public class CompanyDAOImpl implements CompanyDAO {
 			}
 		}
 
-		return company;
+		return student;
 
 	}
 }

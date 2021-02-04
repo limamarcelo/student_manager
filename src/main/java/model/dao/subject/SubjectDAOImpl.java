@@ -6,7 +6,7 @@ import javax.persistence.criteria.Root;
 
 import org.hibernate.Session;
 
-import antlr.collections.List;
+import java.util.List;
 import model.entity.subject.Subject;
 import model.factory.connection.ConnectionFactory;
 
