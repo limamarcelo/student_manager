@@ -46,7 +46,6 @@ public class PositionDAOImpl implements PositionDAO {
 				session.close();
 			}
 		}
-
 	}
 
 	public void removePosition(Position position) {
@@ -76,7 +75,6 @@ public class PositionDAOImpl implements PositionDAO {
 				session.close();
 			}
 		}
-
 	}
 
 	public void updatePosition(Position position) {
@@ -121,9 +119,9 @@ public class PositionDAOImpl implements PositionDAO {
 			CriteriaBuilder construtor = session.getCriteriaBuilder();
 
 			CriteriaQuery<Position> criteria = construtor.createQuery(Position.class);
-			Root<Position> raizCliente = criteria.from(Position.class);
+			Root<Position> rootCustomer = criteria.from(Position.class);
 
-			criteria.select(raizCliente);
+			criteria.select(rootCustomer);
 
 			position = session.createQuery(criteria).getResultList();
 
@@ -146,6 +144,5 @@ public class PositionDAOImpl implements PositionDAO {
 
 		return position;
 
-	}
-
+	}	
 }
