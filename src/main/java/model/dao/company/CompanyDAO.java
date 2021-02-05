@@ -1,8 +1,6 @@
 package model.dao.company;
 
 import java.util.List;
-
-import java.util.List;
 import model.entity.company.Company;
 
 public interface CompanyDAO {
