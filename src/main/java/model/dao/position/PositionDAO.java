@@ -13,5 +13,4 @@ public interface PositionDAO {
 	void updatePosition(Position position);
 		
 	List<Position> listPosition();
-
 }
