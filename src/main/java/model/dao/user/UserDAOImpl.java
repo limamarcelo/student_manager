@@ -24,7 +24,7 @@ public class UserDAOImpl implements UserDAO {
 
 		try {
 
-			session = factory().openSession();
+			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
 			session.save(user);
@@ -45,7 +45,6 @@ public class UserDAOImpl implements UserDAO {
 				session.close();
 			}
 		}
-
 	}
 
 	public void removeUser(User user) {
@@ -54,7 +53,7 @@ public class UserDAOImpl implements UserDAO {
 
 		try {
 
-			session = factory().openSession();
+			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
 			session.remove(user);
@@ -75,7 +74,6 @@ public class UserDAOImpl implements UserDAO {
 				session.close();
 			}
 		}
-
 	}
 
 	public void updateUser(User user) {
@@ -84,7 +82,7 @@ public class UserDAOImpl implements UserDAO {
 
 		try {
 
-			session = factory().openSession();
+			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
 			session.update(user);
@@ -114,15 +112,15 @@ public class UserDAOImpl implements UserDAO {
 
 		try {
 
-			session = factory().openSession();
+			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
 			CriteriaBuilder construtor = session.getCriteriaBuilder();
 
 			CriteriaQuery<User> criteria = construtor.createQuery(User.class);
-			Root<User> raizCliente = criteria.from(User.class);
+			Root<User> rootCustomer = criteria.from(User.class);
 
-			criteria.select(raizCliente);
+			criteria.select(rootCustomer);
 
 			user = session.createQuery(criteria).getResultList();
 

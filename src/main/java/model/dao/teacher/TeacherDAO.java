@@ -5,7 +5,7 @@ import model.entity.teacher.Teacher;
 
 public interface TeacherDAO {
 
-	void insertTeaher(Teacher teacher);
+	void insertTeacher(Teacher teacher);
 	
 	void removeTeacher(Teacher teacher);
 	

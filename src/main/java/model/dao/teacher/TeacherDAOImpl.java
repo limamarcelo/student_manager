@@ -15,7 +15,7 @@ public class TeacherDAOImpl implements TeacherDAO {
 		factory = new ConnectionFactory();
 	}
 
-	public void insertTeaher(Teacher teacher) {
+	public void insertTeacher(Teacher teacher) {
 
 		Session session = null;
 
@@ -42,7 +42,6 @@ public class TeacherDAOImpl implements TeacherDAO {
 				session.close();
 			}
 		}
-
 	}
 
 	public void removeTeacher(Teacher teacher) {
@@ -72,7 +71,6 @@ public class TeacherDAOImpl implements TeacherDAO {
 				session.close();
 			}
 		}
-
 	}
 
 	public void updateTeacher(Teacher teacher) {
@@ -102,7 +100,6 @@ public class TeacherDAOImpl implements TeacherDAO {
 				session.close();
 			}
 		}
-
 	}
 
 	public List<Teacher> listTeacher() {

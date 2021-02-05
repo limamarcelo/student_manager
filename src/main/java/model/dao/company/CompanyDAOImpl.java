@@ -1,12 +1,13 @@
 package model.dao.company;
 
+import java.util.List;
+
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
 import org.hibernate.Session;
 
-import java.util.List;
 import model.entity.company.Company;
 import model.factory.connection.ConnectionFactory;
 
@@ -25,7 +26,7 @@ public class CompanyDAOImpl implements CompanyDAO {
 
 		try {
 
-			session = factory().openSession();
+			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
 			session.save(company);
@@ -46,7 +47,6 @@ public class CompanyDAOImpl implements CompanyDAO {
 				session.close();
 			}
 		}
-
 	}
 
 	public void removeCompany(Company company) {
@@ -55,7 +55,7 @@ public class CompanyDAOImpl implements CompanyDAO {
 
 		try {
 
-			session = factory().openSession();
+			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
 			session.remove(company);
@@ -76,7 +76,6 @@ public class CompanyDAOImpl implements CompanyDAO {
 				session.close();
 			}
 		}
-
 	}
 
 	public void updateCompany(Company company) {
@@ -85,7 +84,7 @@ public class CompanyDAOImpl implements CompanyDAO {
 
 		try {
 
-			session = factory().openSession();
+			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
 			session.update(company);
@@ -115,15 +114,15 @@ public class CompanyDAOImpl implements CompanyDAO {
 
 		try {
 
-			session = factory().openSession();
+			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
 			CriteriaBuilder construtor = session.getCriteriaBuilder();
 
 			CriteriaQuery<Company> criteria = construtor.createQuery(Company.class);
-			Root<Company> raizCliente = criteria.from(Company.class);
+			Root<Company> rootCustomer = criteria.from(Company.class);
 
-			criteria.select(raizCliente);
+			criteria.select(rootCustomer);
 
 			company = session.createQuery(criteria).getResultList();
 

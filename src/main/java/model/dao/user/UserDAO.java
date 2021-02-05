@@ -1,4 +1,5 @@
 package model.dao.user;
+import java.util.List;
 
 import java.util.List;
 import model.entity.user.User;
@@ -12,6 +13,4 @@ public interface UserDAO {
 	void updateUser(User user);
 	
 	List<User> listUser();
-	
-	
 }
