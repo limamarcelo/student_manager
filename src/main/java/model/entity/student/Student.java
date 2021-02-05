@@ -1,5 +1,6 @@
 package model.entity.student;
 
+import model.entity.company.Company;
 import model.entity.course.Course;
 import javax.persistence.Column;
 import javax.persistence.Entity;
