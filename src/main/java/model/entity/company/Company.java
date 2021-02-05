@@ -18,7 +18,7 @@ public class Company implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_company")
-	private Long id_company;
+	private Long id;
 
 	@Column(name = "name_company", length = 40, nullable = false, unique = false)
 	private String name_company;
@@ -37,10 +37,10 @@ public class Company implements Serializable {
 	
 	public Company() {}
 
-	public Company(Long id_company, String name_company, String cnpj_company, String email_company,
+	public Company(Long id, String name_company, String cnpj_company, String email_company,
 			String address_company, Long phone_company) {
 
-		setId_company(id_company);
+		setId(id);
 		setName_company(name_company);
 		setCnpj_company(cnpj_company);
 		setEmail_company(email_company);
@@ -60,12 +60,12 @@ public class Company implements Serializable {
 
 	}
 
-	public Long getId_company() {
-		return id_company;
+	public Long getId() {
+		return id;
 	}
 
-	public void setId_company(Long id_company) {
-		this.id_company = id_company;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getName_company() {
