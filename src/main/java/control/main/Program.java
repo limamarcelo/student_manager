@@ -1,4 +1,4 @@
-opackage control.program;
+package control.program;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -56,7 +56,7 @@ public class Program {
 		do {
 			do {
 				try {
-					System.out.println("Selecione uma das seguintes opções:\n");
+					System.out.println("Selecione uma das seguintes opÃ§Ãµes:\n");
 					System.out.println("1 - Turma");
 					System.out.println("2 - Aluno");
 					System.out.println("3 - Listagem");
@@ -66,10 +66,10 @@ public class Program {
 					condition = false;
 					System.out.println();
 				} catch (NumberFormatException exception) {
-					System.err.println("\nFavor informar um número das opções acima.\n");
+					System.err.println("\nFavor informar um nÃºmero das opÃ§Ãµes acima.\n");
 					condition = true;
 				} catch (IndexOutOfBoundsException exception) {
-					System.err.println("\nOpção inválida.\n");
+					System.err.println("\nOpÃ§Ã£o invÃ¡lida.\n");
 					condition = true;
 				} catch (NullPointerException exception) {
 					System.err.println("\nErro ao acessar o objeto nulo.\n");
@@ -88,7 +88,7 @@ public class Program {
 				do {
 					do {
 						try {
-							System.out.println("Selecione uma das seguintes opções:\n");
+							System.out.println("Selecione uma das seguintes opÃ§Ãµes:\n");
 							System.out.println("1 - Inserir Turma.");
 							System.out.println("2 - Listar Turmas.");
 							System.out.println("3 - Editar Turma.");
@@ -100,10 +100,10 @@ public class Program {
 							System.out.println();
 
 						} catch (NumberFormatException exception) {
-							System.err.println("\nFavor informar um número das opções acima.\n");
+							System.err.println("\nFavor informar um nÃºmero das opÃ§Ãµes acima.\n");
 							condition = true;
 						} catch (IndexOutOfBoundsException exception) {
-							System.err.println("\nOpção inválida.\n");
+							System.err.println("\nOpÃ§Ã£o invÃ¡lida.\n");
 							condition = true;
 						} catch (NullPointerException exception) {
 							System.err.println("\nErro ao acessar o objeto nulo.\n");
@@ -120,7 +120,7 @@ public class Program {
 						sc.nextLine();
 						String name = sc.nextLine();
 
-						System.out.println("Informe o código da turma:");
+						System.out.println("Informe o cÃ³digo da turma:");
 						String code = sc.nextLine();
 
 						group.setName(name);
@@ -139,20 +139,20 @@ public class Program {
 
 						do {
 							try {
-								System.out.println("Selecione uma das seguintes opções:\n");
+								System.out.println("Selecione uma das seguintes opÃ§Ãµes:\n");
 								System.out.println("1 - Listar Turmas pelo Id.");
 								System.out.println("2 - Listar Turmas pelo Nome.");
-								System.out.println("3 - Listar Turmas pelo Código.");
+								System.out.println("3 - Listar Turmas pelo CÃ³digo.");
 
 								attribute = AttributeGroup.values()[Integer.parseInt(sc.next()) - 1];
 								condition = false;
 								System.out.println();
 
 							} catch (NumberFormatException exception) {
-								System.err.println("\nFavor informar um número das opções acima.\n");
+								System.err.println("\nFavor informar um nÃºmero das opÃ§Ãµes acima.\n");
 								condition = true;
 							} catch (IndexOutOfBoundsException exception) {
-								System.err.println("\nOpção inválida.\n");
+								System.err.println("\nOpÃ§Ã£o invÃ¡lida.\n");
 								condition = true;
 							} catch (NullPointerException exception) {
 								System.err.println("\nErro ao acessar o objeto nulo.\n");
@@ -162,7 +162,7 @@ public class Program {
 
 						do {
 							try {
-								System.out.println("Selecione uma das seguintes opções:\n");
+								System.out.println("Selecione uma das seguintes opÃ§Ãµes:\n");
 								System.out.println("1 - Listar em Ordem Ascendente.");
 								System.out.println("2 - Listar em Ordem Descendente.");
 
@@ -171,10 +171,10 @@ public class Program {
 								System.out.println();
 
 							} catch (NumberFormatException exception) {
-								System.err.println("\nFavor informar um número das opções acima.\n");
+								System.err.println("\nFavor informar um nÃºmero das opÃ§Ãµes acima.\n");
 								condition = true;
 							} catch (IndexOutOfBoundsException exception) {
-								System.err.println("\nOpção inválida.\n");
+								System.err.println("\nOpÃ§Ã£o invÃ¡lida.\n");
 								condition = true;
 							} catch (NullPointerException exception) {
 								System.err.println("\nErro ao acessar o objeto nulo.\n");
@@ -233,8 +233,8 @@ public class Program {
 						// Listing according to the chosen option;
 						System.out.println("Listagem das turmas:");
 						for (int i = 0; i < groups.size(); i++) {
-							System.out.println("Número Sequencial da Turma: #" + (i + 1) + ", Registro: #"
-									+ groups.get(i).getId() + ", Nome: " + groups.get(i).getName() + ", Código: "
+							System.out.println("NÃºmero Sequencial da Turma: #" + (i + 1) + ", Registro: #"
+									+ groups.get(i).getId() + ", Nome: " + groups.get(i).getName() + ", CÃ³digo: "
 									+ groups.get(i).getCode() + ", Quantidade de Aluno(s): "
 									+ groups.get(i).getStudents().size());
 						}
@@ -249,9 +249,9 @@ public class Program {
 						do {
 							do {
 								try {
-									System.out.println("Selecione uma das seguintes opções:\n");
+									System.out.println("Selecione uma das seguintes opÃ§Ãµes:\n");
 									System.out.println("1 - Alterar o nome do turma.");
-									System.out.println("2 - Alterar o código do turma.");
+									System.out.println("2 - Alterar o cÃ³digo do turma.");
 									System.out.println("3 - Alterar o todos os dados do turma.");
 									System.out.println("4 - Voltar Menu Principal.");
 
@@ -260,10 +260,10 @@ public class Program {
 									System.out.println();
 
 								} catch (NumberFormatException exception) {
-									System.err.println("\nFavor informar um número das opções acima.\n");
+									System.err.println("\nFavor informar um nÃºmero das opÃ§Ãµes acima.\n");
 									condition = true;
 								} catch (IndexOutOfBoundsException exception) {
-									System.err.println("\nOpção inválida.\n");
+									System.err.println("\nOpÃ§Ã£o invÃ¡lida.\n");
 									condition = true;
 								} catch (NullPointerException exception) {
 									System.err.println("\nErro ao acessar o objeto nulo.\n");
@@ -274,8 +274,8 @@ public class Program {
 							// Listing Groups by Id Asc;
 							System.out.println("Listagem das turmas:");
 							for (int i = 0; i < groups.size(); i++) {
-								System.out.println("Número Sequencial da Turma: #" + (i + 1) + ", Registro: #"
-										+ groups.get(i).getId() + ", Nome: " + groups.get(i).getName() + ", Código: "
+								System.out.println("NÃºmero Sequencial da Turma: #" + (i + 1) + ", Registro: #"
+										+ groups.get(i).getId() + ", Nome: " + groups.get(i).getName() + ", CÃ³digo: "
 										+ groups.get(i).getCode());
 							}
 							System.out.println();
@@ -288,16 +288,16 @@ public class Program {
 								do {
 									try {
 
-										System.out.println("Informe o Número Sequencial da turma para alterar:");
+										System.out.println("Informe o NÃºmero Sequencial da turma para alterar:");
 										group = groups.get(Integer.parseInt(sc.next()) - 1);
 										condition = false;
 										System.out.println();
 
 									} catch (NumberFormatException exception) {
-										System.err.println("\nFavor informar um número das opções acima.\n");
+										System.err.println("\nFavor informar um nÃºmero das opÃ§Ãµes acima.\n");
 										condition = true;
 									} catch (IndexOutOfBoundsException exception) {
-										System.err.println("\nOpção inválida.\n");
+										System.err.println("\nOpÃ§Ã£o invÃ¡lida.\n");
 										condition = true;
 									} catch (NullPointerException exception) {
 										System.err.println("\nErro ao acessar o objeto nulo.\n");
@@ -322,16 +322,16 @@ public class Program {
 								do {
 									try {
 
-										System.out.println("Informe o Número Sequencial da turma para alterar:");
+										System.out.println("Informe o NÃºmero Sequencial da turma para alterar:");
 										group = groups.get(Integer.parseInt(sc.next()) - 1);
 										condition = false;
 										System.out.println();
 
 									} catch (NumberFormatException exception) {
-										System.err.println("\nFavor informar um número das opções acima.\n");
+										System.err.println("\nFavor informar um nÃºmero das opÃ§Ãµes acima.\n");
 										condition = true;
 									} catch (IndexOutOfBoundsException exception) {
-										System.err.println("\nOpção inválida.\n");
+										System.err.println("\nOpÃ§Ã£o invÃ¡lida.\n");
 										condition = true;
 									} catch (NullPointerException exception) {
 										System.err.println("\nErro ao acessar o objeto nulo.\n");
@@ -339,7 +339,7 @@ public class Program {
 									}
 								} while (condition);
 
-								System.out.println("Informe o novo código do turma:");
+								System.out.println("Informe o novo cÃ³digo do turma:");
 								sc.nextLine();
 								group.setCode(sc.nextLine());
 
@@ -355,16 +355,16 @@ public class Program {
 								do {
 									try {
 
-										System.out.println("Informe o Número Sequencial da turma para alterar:");
+										System.out.println("Informe o NÃºmero Sequencial da turma para alterar:");
 										group = groups.get(Integer.parseInt(sc.next()) - 1);
 										condition = false;
 										System.out.println();
 
 									} catch (NumberFormatException exception) {
-										System.err.println("\nFavor informar um número das opções acima.\n");
+										System.err.println("\nFavor informar um nÃºmero das opÃ§Ãµes acima.\n");
 										condition = true;
 									} catch (IndexOutOfBoundsException exception) {
-										System.err.println("\nOpção inválida.\n");
+										System.err.println("\nOpÃ§Ã£o invÃ¡lida.\n");
 										condition = true;
 									} catch (NullPointerException exception) {
 										System.err.println("\nErro ao acessar o objeto nulo.\n");
@@ -376,7 +376,7 @@ public class Program {
 								sc.nextLine();
 								group.setName(sc.nextLine());
 
-								System.out.println("Informe o novo código do turma:");
+								System.out.println("Informe o novo cÃ³digo do turma:");
 								group.setCode(sc.nextLine());
 
 								daoGroup.updateGroup(group);
@@ -400,8 +400,8 @@ public class Program {
 						// Listing Groups by Id Asc;
 						System.out.println("Listagem das turmas:");
 						for (int i = 0; i < groups.size(); i++) {
-							System.out.println("Número Sequencial da Turma: #" + (i + 1) + ", Registro: #"
-									+ groups.get(i).getId() + ", Nome: " + groups.get(i).getName() + ", Código: "
+							System.out.println("NÃºmero Sequencial da Turma: #" + (i + 1) + ", Registro: #"
+									+ groups.get(i).getId() + ", Nome: " + groups.get(i).getName() + ", CÃ³digo: "
 									+ groups.get(i).getCode());
 						}
 						System.out.println();
@@ -409,15 +409,15 @@ public class Program {
 						do {
 							try {
 
-								System.out.println("Informe o Número Sequencial da turma para excluir:");
+								System.out.println("Informe o NÃºmero Sequencial da turma para excluir:");
 								group = groups.get(Integer.parseInt(sc.next()) - 1);
 								condition = false;
 
 							} catch (NumberFormatException exception) {
-								System.err.println("\nFavor informar um número das opções acima.\n");
+								System.err.println("\nFavor informar um nÃºmero das opÃ§Ãµes acima.\n");
 								condition = true;
 							} catch (IndexOutOfBoundsException exception) {
-								System.err.println("\nOpção inválida.\n");
+								System.err.println("\nOpÃ§Ã£o invÃ¡lida.\n");
 								condition = true;
 							} catch (NullPointerException exception) {
 								System.err.println("\nErro ao acessar o objeto nulo.\n");
@@ -430,10 +430,10 @@ public class Program {
 							condition = false;
 							System.out.println();
 						} catch (GroupDeleteException exception) {
-							System.err.println("\nTurma não pode ser excluída, pois há alunos vinculados.\n");
+							System.err.println("\nTurma nÃ£o pode ser excluÃ­da, pois hÃ¡ alunos vinculados.\n");
 							condition = true;
 						} catch (SQLException exception) {
-							System.err.println("\nTurma não pode ser excluída.\n");
+							System.err.println("\nTurma nÃ£o pode ser excluÃ­da.\n");
 							condition = true;
 						}
 
@@ -462,7 +462,7 @@ public class Program {
 				do {
 					do {
 						try {
-							System.out.println("Selecione uma das seguintes opções:\n");
+							System.out.println("Selecione uma das seguintes opÃ§Ãµes:\n");
 							System.out.println("1 - Inserir Aluno.");
 							System.out.println("2 - Listar Alunos.");
 							System.out.println("3 - Editar Aluno.");
@@ -474,10 +474,10 @@ public class Program {
 							System.out.println();
 
 						} catch (NumberFormatException exception) {
-							System.err.println("\nFavor informar um número das opções acima.\n");
+							System.err.println("\nFavor informar um nÃºmero das opÃ§Ãµes acima.\n");
 							condition = true;
 						} catch (IndexOutOfBoundsException exception) {
-							System.err.println("\nOpção inválida.\n");
+							System.err.println("\nOpÃ§Ã£o invÃ¡lida.\n");
 							condition = true;
 						} catch (NullPointerException exception) {
 							System.err.println("\nErro ao acessar o objeto nulo.\n");
@@ -502,8 +502,8 @@ public class Program {
 						// Listing Groups by Id Asc;
 						System.out.println("Listagem das turmas:");
 						for (int i = 0; i < groups.size(); i++) {
-							System.out.println("Número Sequencial da Turma: #" + (i + 1) + ", Registro: #"
-									+ groups.get(i).getId() + ", Nome: " + groups.get(i).getName() + ", Código: "
+							System.out.println("NÃºmero Sequencial da Turma: #" + (i + 1) + ", Registro: #"
+									+ groups.get(i).getId() + ", Nome: " + groups.get(i).getName() + ", CÃ³digo: "
 									+ groups.get(i).getCode());
 						}
 						System.out.println();
@@ -511,17 +511,17 @@ public class Program {
 						do {
 							try {
 
-								System.out.println("Informe o Número Sequencial da Turma do Aluno:");
+								System.out.println("Informe o NÃºmero Sequencial da Turma do Aluno:");
 								group = groups.get(Integer.parseInt(sc.next()) - 1);
 
 								condition = false;
 								System.out.println();
 
 							} catch (NumberFormatException exception) {
-								System.err.println("\nFavor informar um número das opções acima.\n");
+								System.err.println("\nFavor informar um nÃºmero das opÃ§Ãµes acima.\n");
 								condition = true;
 							} catch (IndexOutOfBoundsException exception) {
-								System.err.println("\nOpção inválida.\n");
+								System.err.println("\nOpÃ§Ã£o invÃ¡lida.\n");
 								condition = true;
 							} catch (NullPointerException exception) {
 								System.err.println("\nErro ao acessar o objeto nulo.\n");
@@ -546,7 +546,7 @@ public class Program {
 
 						do {
 							try {
-								System.out.println("Selecione uma das seguintes opções:\n");
+								System.out.println("Selecione uma das seguintes opÃ§Ãµes:\n");
 								System.out.println("1 - Listar Alunos pelo Id.");
 								System.out.println("2 - Listar Alunos pelo Nome.");
 								System.out.println("3 - Listar Alunos pelo Sobrenome.");
@@ -557,10 +557,10 @@ public class Program {
 								System.out.println();
 
 							} catch (NumberFormatException exception) {
-								System.err.println("\nFavor informar um número das opções acima.\n");
+								System.err.println("\nFavor informar um nÃºmero das opÃ§Ãµes acima.\n");
 								condition = true;
 							} catch (IndexOutOfBoundsException exception) {
-								System.err.println("\nOpção inválida.\n");
+								System.err.println("\nOpÃ§Ã£o invÃ¡lida.\n");
 								condition = true;
 							} catch (NullPointerException exception) {
 								System.err.println("\nErro ao acessar o objeto nulo.\n");
@@ -570,7 +570,7 @@ public class Program {
 
 						do {
 							try {
-								System.out.println("Selecione uma das seguintes opções:\n");
+								System.out.println("Selecione uma das seguintes opÃ§Ãµes:\n");
 								System.out.println("1 - Listar em Ordem Ascendente.");
 								System.out.println("2 - Listar em Ordem Descendente.");
 
@@ -579,10 +579,10 @@ public class Program {
 								System.out.println();
 
 							} catch (NumberFormatException exception) {
-								System.err.println("\nFavor informar um número das opções acima.\n");
+								System.err.println("\nFavor informar um nÃºmero das opÃ§Ãµes acima.\n");
 								condition = true;
 							} catch (IndexOutOfBoundsException exception) {
-								System.err.println("\nOpção inválida.\n");
+								System.err.println("\nOpÃ§Ã£o invÃ¡lida.\n");
 								condition = true;
 							} catch (NullPointerException exception) {
 								System.err.println("\nErro ao acessar o objeto nulo.\n");
@@ -675,7 +675,7 @@ public class Program {
 						do {
 							do {
 								try {
-									System.out.println("Selecione uma das seguintes opções:\n");
+									System.out.println("Selecione uma das seguintes opÃ§Ãµes:\n");
 									System.out.println("1 - Alterar o nome do Aluno.");
 									System.out.println("2 - Alterar o sobrenome do Aluno.");
 									System.out.println("3 - Alterar a turma do Aluno.");
@@ -688,10 +688,10 @@ public class Program {
 									System.out.println();
 
 								} catch (NumberFormatException exception) {
-									System.err.println("\nFavor informar um número das opções acima.\n");
+									System.err.println("\nFavor informar um nÃºmero das opÃ§Ãµes acima.\n");
 									condition = true;
 								} catch (IndexOutOfBoundsException exception) {
-									System.err.println("\nOpção inválida.\n");
+									System.err.println("\nOpÃ§Ã£o invÃ¡lida.\n");
 									condition = true;
 								} catch (NullPointerException exception) {
 									System.err.println("\nErro ao acessar o objeto nulo.\n");
@@ -702,7 +702,7 @@ public class Program {
 							// Listing Students By Id;
 							System.out.println("Listagem de alunos:");
 							for (int i = 0; i < students.size(); i++) {
-								System.out.println("Número Sequencial do Aluno: #" + (i + 1) + ", Registro :#"
+								System.out.println("NÃºmero Sequencial do Aluno: #" + (i + 1) + ", Registro :#"
 										+ students.get(i).getId() + ", Nome: " + students.get(i).getName()
 										+ ", Sobrenome: " + students.get(i).getSurname() + ", Registro da Turma: #"
 										+ students.get(i).getGroup().getId());
@@ -719,16 +719,16 @@ public class Program {
 								do {
 									try {
 
-										System.out.println("Informe o Número Sequencial do Aluno:");
+										System.out.println("Informe o NÃºmero Sequencial do Aluno:");
 										student = students.get(Integer.parseInt(sc.next()) - 1);
 										condition = false;
 										System.out.println();
 
 									} catch (NumberFormatException exception) {
-										System.err.println("\nFavor informar um número das opções acima.\n");
+										System.err.println("\nFavor informar um nÃºmero das opÃ§Ãµes acima.\n");
 										condition = true;
 									} catch (IndexOutOfBoundsException exception) {
-										System.err.println("\nOpção inválida.\n");
+										System.err.println("\nOpÃ§Ã£o invÃ¡lida.\n");
 										condition = true;
 									} catch (NullPointerException exception) {
 										System.err.println("\nErro ao acessar o objeto nulo.\n");
@@ -752,16 +752,16 @@ public class Program {
 								do {
 									try {
 
-										System.out.println("Informe o Número Sequencial do Aluno para alterar:");
+										System.out.println("Informe o NÃºmero Sequencial do Aluno para alterar:");
 										student = students.get(Integer.parseInt(sc.next()) - 1);
 										condition = false;
 										System.out.println();
 
 									} catch (NumberFormatException exception) {
-										System.err.println("\nFavor informar um número das opções acima.\n");
+										System.err.println("\nFavor informar um nÃºmero das opÃ§Ãµes acima.\n");
 										condition = true;
 									} catch (IndexOutOfBoundsException exception) {
-										System.err.println("\nOpção inválida.\n");
+										System.err.println("\nOpÃ§Ã£o invÃ¡lida.\n");
 										condition = true;
 									} catch (NullPointerException exception) {
 										System.err.println("\nErro ao acessar o objeto nulo.\n");
@@ -785,16 +785,16 @@ public class Program {
 								do {
 									try {
 
-										System.out.println("Informe o Número Sequencial do Aluno para alterar:");
+										System.out.println("Informe o NÃºmero Sequencial do Aluno para alterar:");
 										student = students.get(Integer.parseInt(sc.next()) - 1);
 										condition = false;
 										System.out.println();
 
 									} catch (NumberFormatException exception) {
-										System.err.println("\nFavor informar um número das opções acima.\n");
+										System.err.println("\nFavor informar um nÃºmero das opÃ§Ãµes acima.\n");
 										condition = true;
 									} catch (IndexOutOfBoundsException exception) {
-										System.err.println("\nOpção inválida.\n");
+										System.err.println("\nOpÃ§Ã£o invÃ¡lida.\n");
 										condition = true;
 									} catch (NullPointerException exception) {
 										System.err.println("\nErro ao acessar o objeto nulo.\n");
@@ -807,16 +807,16 @@ public class Program {
 								// Listing Groups by Id Asc;
 								System.out.println("Listagem das turmas:");
 								for (int i = 0; i < groups.size(); i++) {
-									System.out.println("Número Sequencial da Turma: #" + (i + 1) + ", Registro: #"
+									System.out.println("NÃºmero Sequencial da Turma: #" + (i + 1) + ", Registro: #"
 											+ groups.get(i).getId() + ", Nome: " + groups.get(i).getName()
-											+ " e Código: " + groups.get(i).getCode());
+											+ " e CÃ³digo: " + groups.get(i).getCode());
 								}
 								System.out.println();
 
 								do {
 									try {
 
-										System.out.println("Informe o Número Sequencial da nova Turma do Aluno:");
+										System.out.println("Informe o NÃºmero Sequencial da nova Turma do Aluno:");
 										sc.nextLine();
 										group = groups.get(Integer.parseInt(sc.next()) - 1);
 
@@ -824,10 +824,10 @@ public class Program {
 										System.out.println();
 
 									} catch (NumberFormatException exception) {
-										System.err.println("\nFavor informar um número das opções acima.\n");
+										System.err.println("\nFavor informar um nÃºmero das opÃ§Ãµes acima.\n");
 										condition = true;
 									} catch (IndexOutOfBoundsException exception) {
-										System.err.println("\nOpção inválida.\n");
+										System.err.println("\nOpÃ§Ã£o invÃ¡lida.\n");
 										condition = true;
 									} catch (NullPointerException exception) {
 										System.err.println("\nErro ao acessar o objeto nulo.\n");
@@ -850,16 +850,16 @@ public class Program {
 									try {
 
 										System.out.println(
-												"Informe o Número Sequencial do Aluno para alterar todos os dados:");
+												"Informe o NÃºmero Sequencial do Aluno para alterar todos os dados:");
 										student = students.get(Integer.parseInt(sc.next()) - 1);
 										condition = false;
 										System.out.println();
 
 									} catch (NumberFormatException exception) {
-										System.err.println("\nFavor informar um número das opções acima.\n");
+										System.err.println("\nFavor informar um nÃºmero das opÃ§Ãµes acima.\n");
 										condition = true;
 									} catch (IndexOutOfBoundsException exception) {
-										System.err.println("\nOpção inválida.\n");
+										System.err.println("\nOpÃ§Ã£o invÃ¡lida.\n");
 										condition = true;
 									} catch (NullPointerException exception) {
 										System.err.println("\nErro ao acessar o objeto nulo.\n");
@@ -879,26 +879,26 @@ public class Program {
 								// Listing Groups by Id Asc;
 								System.out.println("Listagem das turmas:");
 								for (int i = 0; i < groups.size(); i++) {
-									System.out.println("Número Sequencial da Turma: #" + (i + 1) + ", Registro: #"
+									System.out.println("NÃºmero Sequencial da Turma: #" + (i + 1) + ", Registro: #"
 											+ groups.get(i).getId() + ", Nome: " + groups.get(i).getName()
-											+ " e Código: " + groups.get(i).getCode());
+											+ " e CÃ³digo: " + groups.get(i).getCode());
 								}
 								System.out.println();
 
 								do {
 									try {
 
-										System.out.println("Informe o Número Sequencial da nova Turma do Aluno:");
+										System.out.println("Informe o NÃºmero Sequencial da nova Turma do Aluno:");
 										group = groups.get(Integer.parseInt(sc.next()) - 1);
 
 										condition = false;
 										System.out.println();
 
 									} catch (NumberFormatException exception) {
-										System.err.println("\nFavor informar um número das opções acima.\n");
+										System.err.println("\nFavor informar um nÃºmero das opÃ§Ãµes acima.\n");
 										condition = true;
 									} catch (IndexOutOfBoundsException exception) {
-										System.err.println("\nOpção inválida.\n");
+										System.err.println("\nOpÃ§Ã£o invÃ¡lida.\n");
 										condition = true;
 									} catch (NullPointerException exception) {
 										System.err.println("\nErro ao acessar o objeto nulo.\n");
@@ -929,7 +929,7 @@ public class Program {
 						// Listing Students By Id;
 						System.out.println("Listagem de alunos:");
 						for (int i = 0; i < students.size(); i++) {
-							System.out.println("Número Sequencial do Aluno: #" + (i + 1) + ", Registro :#"
+							System.out.println("NÃºmero Sequencial do Aluno: #" + (i + 1) + ", Registro :#"
 									+ students.get(i).getId() + ", Nome: " + students.get(i).getName() + ", Sobrenome: "
 									+ students.get(i).getSurname() + ", Registro da Turma: #"
 									+ students.get(i).getGroup().getId());
@@ -941,16 +941,16 @@ public class Program {
 						do {
 							try {
 
-								System.out.println("Informe o Número Sequencial do Aluno para excluir:");
+								System.out.println("Informe o NÃºmero Sequencial do Aluno para excluir:");
 								student = students.get(Integer.parseInt(sc.next()) - 1);
 								condition = false;
 								System.out.println();
 
 							} catch (NumberFormatException exception) {
-								System.err.println("\nFavor informar um número das opções acima.\n");
+								System.err.println("\nFavor informar um nÃºmero das opÃ§Ãµes acima.\n");
 								condition = true;
 							} catch (IndexOutOfBoundsException exception) {
-								System.err.println("\nOpção inválida.\n");
+								System.err.println("\nOpÃ§Ã£o invÃ¡lida.\n");
 								condition = true;
 							} catch (NullPointerException exception) {
 								System.err.println("\nErro ao acessar o objeto nulo.\n");
@@ -981,7 +981,7 @@ public class Program {
 				do {
 					do {
 						try {
-							System.out.println("Selecione uma das seguintes opções:\n");
+							System.out.println("Selecione uma das seguintes opÃ§Ãµes:\n");
 							System.out.println("1 - Listar todas as Turmas com Alunos.");
 							System.out.println("2 - Listar Menor Turma.");
 							System.out.println("3 - Listar Maior Turma.");
@@ -992,10 +992,10 @@ public class Program {
 							System.out.println();
 
 						} catch (NumberFormatException exception) {
-							System.err.println("\nFavor informar um número das opções acima.\n");
+							System.err.println("\nFavor informar um nÃºmero das opÃ§Ãµes acima.\n");
 							condition = true;
 						} catch (IndexOutOfBoundsException exception) {
-							System.err.println("\nOpção inválida.\n");
+							System.err.println("\nOpÃ§Ã£o invÃ¡lida.\n");
 							condition = true;
 						} catch (NullPointerException exception) {
 							System.err.println("\nErro ao acessar o objeto nulo.\n");
@@ -1010,7 +1010,7 @@ public class Program {
 
 						do {
 							try {
-								System.out.println("Selecione uma das seguintes opções:\n");
+								System.out.println("Selecione uma das seguintes opÃ§Ãµes:\n");
 								System.out.println("1 - Listar Alunos por Turmas Ordenado pelo Id do Aluno.");
 								System.out.println("2 - Listar Alunos por Turmas Ordenado pelo Nome do Aluno.");
 								System.out.println("3 - Listar Alunos por Turmas Ordenado pelo Sobrenome do Aluno.");
@@ -1020,10 +1020,10 @@ public class Program {
 								System.out.println();
 
 							} catch (NumberFormatException exception) {
-								System.err.println("\nFavor informar um número das opções acima.\n");
+								System.err.println("\nFavor informar um nÃºmero das opÃ§Ãµes acima.\n");
 								condition = true;
 							} catch (IndexOutOfBoundsException exception) {
-								System.err.println("\nOpção inválida.\n");
+								System.err.println("\nOpÃ§Ã£o invÃ¡lida.\n");
 								condition = true;
 							} catch (NullPointerException exception) {
 								System.err.println("\nErro ao acessar o objeto nulo.\n");
@@ -1033,7 +1033,7 @@ public class Program {
 
 						do {
 							try {
-								System.out.println("Selecione uma das seguintes opções:\n");
+								System.out.println("Selecione uma das seguintes opÃ§Ãµes:\n");
 								System.out.println("1 - Listar em Ordem Ascendente.");
 								System.out.println("2 - Listar em Ordem Descendente.");
 
@@ -1042,10 +1042,10 @@ public class Program {
 								System.out.println();
 
 							} catch (NumberFormatException exception) {
-								System.err.println("\nFavor informar um número das opções acima.\n");
+								System.err.println("\nFavor informar um nÃºmero das opÃ§Ãµes acima.\n");
 								condition = true;
 							} catch (IndexOutOfBoundsException exception) {
-								System.err.println("\nOpção inválida.\n");
+								System.err.println("\nOpÃ§Ã£o invÃ¡lida.\n");
 								condition = true;
 							} catch (NullPointerException exception) {
 								System.err.println("\nErro ao acessar o objeto nulo.\n");
@@ -1122,7 +1122,7 @@ public class Program {
 						System.out.println("Listagem de alunos por turma:");
 						for (int i = 0; i < groups.size(); i++) {
 							System.out.println("Registro da Turma: #" + groups.get(i).getId() + ", Nome: "
-									+ groups.get(i).getName() + " e Código: " + groups.get(i).getCode()
+									+ groups.get(i).getName() + " e CÃ³digo: " + groups.get(i).getCode()
 									+ ", Quantidade de Aluno(s): " + groups.get(i).getStudents().size());
 							if (groups.get(i).getStudents().size() > 0) {
 								System.out.println("	Aluno(s) Cadastrado(s) na Turma: ");
@@ -1134,7 +1134,7 @@ public class Program {
 													+ ", Registro da Turma: #" + groups.get(i).getId());
 								}
 							} else {
-								System.out.println("Não Há Alunos Cadastrados Nesta Turma");
+								System.out.println("NÃ£o HÃ¡ Alunos Cadastrados Nesta Turma");
 							}
 							System.out.println("");
 						}
@@ -1148,9 +1148,9 @@ public class Program {
 						List<Group> smallestGroup = daoListGroups.listSmallestStudentGroup();
 
 						for (int i = 0; i < smallestGroup.size(); i++) {
-							System.out.println("Número Sequencial da Turma: #" + (i + 1) + ", Registro: #"
+							System.out.println("NÃºmero Sequencial da Turma: #" + (i + 1) + ", Registro: #"
 									+ smallestGroup.get(i).getId() + ", Nome: " + smallestGroup.get(i).getName()
-									+ ", Código: " + smallestGroup.get(i).getCode() + "  e Total de Aluno(s): "
+									+ ", CÃ³digo: " + smallestGroup.get(i).getCode() + "  e Total de Aluno(s): "
 									+ smallestGroup.get(i).getStudents().size());
 						}
 						System.out.println();
@@ -1163,9 +1163,9 @@ public class Program {
 						List<Group> biggestGroup = daoListGroups.listBiggestStudentGroup();
 
 						for (int i = 0; i < biggestGroup.size(); i++) {
-							System.out.println("Número Sequencial da Turma: #" + (i + 1) + ", Registro: #"
+							System.out.println("NÃºmero Sequencial da Turma: #" + (i + 1) + ", Registro: #"
 									+ biggestGroup.get(i).getId() + ", Nome: " + biggestGroup.get(i).getName()
-									+ ", Código: " + biggestGroup.get(i).getCode() + " e Total de Aluno(s): "
+									+ ", CÃ³digo: " + biggestGroup.get(i).getCode() + " e Total de Aluno(s): "
 									+ biggestGroup.get(i).getStudents().size());
 						}
 						System.out.println();
