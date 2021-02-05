@@ -1,4 +1,6 @@
-package model.entity.freqency;
+package model.entity.frequency;
+
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
@@ -10,9 +12,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.mysql.cj.x.protobuf.MysqlxDatatypes.Scalar.String;
-
-import model.enume.freqency.FrequencyStatus;
+import model.enumeration.frequency.FrequencyStatus;
 
 @Entity
 @Table(name = "frequency")
@@ -34,7 +34,7 @@ public class Frequency {
 	@Column(name = "jusfied_frequency", length = 40, nullable = true, unique = false)
 	private String jusfied;
 
-	public Frequency(short status) {
+	public Frequency(FrequencyStatus status) {
 		setStatus(status);
 		new Date();
 	}
@@ -47,7 +47,7 @@ public class Frequency {
 		return id;
 	}
 
-	public void setId() {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -59,12 +59,11 @@ public class Frequency {
 		this.jusfied = jusfied;
 	}
 
-	public short getStatus() {
+	public FrequencyStatus getStatus() {
 		return status;
 	}
 
-	public void setStatus(short status) {
+	public void setStatus(FrequencyStatus status) {
 		this.status = status;
 	}
-
 }
