@@ -1,7 +1,5 @@
 package model.entity.student;
 
-import model.entity.company.Company;
-import model.entity.course.Course;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -12,6 +10,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import model.entity.company.Company;
 import model.entity.course.Course;
 
 @Entity
@@ -114,6 +113,4 @@ public class Student {
 	public void setCompany(Company company) {
 		this.company = company;
 	}
-	
-
 }
