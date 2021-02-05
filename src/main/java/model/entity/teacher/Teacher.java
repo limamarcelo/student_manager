@@ -37,7 +37,7 @@ public class Teacher {
 		setSubject(subject);
 	}
 	
-	public Teacher(int id, String name, String cpf, String email, String subject) {
+	public Teacher(Long id, String name, String cpf, String email, String subject) {
 		setId(id);
 		setName(name);
 		setCpf(cpf);
@@ -45,10 +45,10 @@ public class Teacher {
 		setSubject(subject);
 	}
 	
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getName() {
