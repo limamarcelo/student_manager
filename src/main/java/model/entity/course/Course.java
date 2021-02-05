@@ -40,15 +40,15 @@ public class Course {
 		setId(id);
 	}
 	
-	public Course(String name, List<Subject> subjects) {
+	public Course(String name, Subject subject) {
 		setName(name);
-		setSubjects(subjects);
+		addSubject(subject);
 	}
 	
-	public Course(Long id, String name, List<Subject> subjects) {
+	public Course(Long id, String name, Subject subject) {
 		setId(id);
 		setName(name);
-		setSubjects(subjects);
+		addSubject(subject);
 	}
 	
 	
@@ -74,8 +74,12 @@ public class Course {
 		return subjects;
 	}
 
-	public void setSubjects(List<Subject> subjects) {
-		this.subjects = subjects;
+	public void addSubject(Subject sub) {
+		subjects.add(sub);
+	}
+	
+	public void removeSubject(Subject sub) {
+		subjects.remove(sub);
 	}
 	
 	
