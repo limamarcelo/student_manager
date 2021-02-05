@@ -1,4 +1,4 @@
-package model.dao.user;
+package model.dao.position;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -7,18 +7,19 @@ import javax.persistence.criteria.Root;
 import org.hibernate.Session;
 
 import java.util.List;
-import model.entity.user.User;
+import model.entity.position.Position;
 import model.factory.connection.ConnectionFactory;
 
-public class UserDAOImpl implements UserDAO {
+
+public class PositionDAOImpl implements PositionDAO {
 	
 	private ConnectionFactory factory;
 
-	public UserDAOImpl() {
+	public PositionDAOImpl() {
 		factory = new ConnectionFactory();
 	}
 	
-	public void insertUser(User user) {
+	public void insertPosition(Position position) {
 
 		Session session = null;
 
@@ -27,7 +28,7 @@ public class UserDAOImpl implements UserDAO {
 			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
-			session.save(user);
+			session.save(position);
 			
 			session.getTransaction().commit();
 
@@ -47,7 +48,7 @@ public class UserDAOImpl implements UserDAO {
 		}
 	}
 
-	public void removeUser(User user) {
+	public void removePosition(Position position) {
 
 		Session session = null;
 
@@ -56,7 +57,7 @@ public class UserDAOImpl implements UserDAO {
 			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
-			session.remove(user);
+			session.remove(position);
 
 			session.getTransaction().commit();
 
@@ -76,7 +77,7 @@ public class UserDAOImpl implements UserDAO {
 		}
 	}
 
-	public void updateUser(User user) {
+	public void updatePosition(Position position) {
 
 		Session session = null;
 
@@ -85,7 +86,7 @@ public class UserDAOImpl implements UserDAO {
 			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
-			session.update(user);
+			session.update(position);
 
 			session.getTransaction().commit();
 
@@ -105,10 +106,10 @@ public class UserDAOImpl implements UserDAO {
 		}
 	}
 
-	public List<User> listUser() {
+	public List<Position> listPosition() {
 
 		Session session = null;
-		List<User> user = null;
+		List<Position> position = null;
 
 		try {
 
@@ -117,12 +118,12 @@ public class UserDAOImpl implements UserDAO {
 
 			CriteriaBuilder construtor = session.getCriteriaBuilder();
 
-			CriteriaQuery<User> criteria = construtor.createQuery(User.class);
-			Root<User> rootCustomer = criteria.from(User.class);
+			CriteriaQuery<Position> criteria = construtor.createQuery(Position.class);
+			Root<Position> rootCustomer = criteria.from(Position.class);
 
 			criteria.select(rootCustomer);
 
-			user = session.createQuery(criteria).getResultList();
+			position = session.createQuery(criteria).getResultList();
 
 			session.getTransaction().commit();
 
@@ -141,7 +142,7 @@ public class UserDAOImpl implements UserDAO {
 			}
 		}
 
-		return user;
+		return position;
 
-	}
+	}	
 }

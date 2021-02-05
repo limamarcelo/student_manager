@@ -10,26 +10,25 @@ import java.util.List;
 import model.entity.student.Student;
 import model.factory.connection.ConnectionFactory;
 
-
 public class StudentDAOImpl implements StudentDAO {
-	
+
 	private ConnectionFactory factory;
 
 	public StudentDAOImpl() {
 		factory = new ConnectionFactory();
 	}
-	
+
 	public void insertStudent(Student student) {
 
 		Session session = null;
 
 		try {
 
-			session = factory().openSession();
+			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
 			session.save(student);
-			
+
 			session.getTransaction().commit();
 
 		} catch (Exception sqlException) {
@@ -46,7 +45,6 @@ public class StudentDAOImpl implements StudentDAO {
 				session.close();
 			}
 		}
-
 	}
 
 	public void removeStudent(Student student) {
@@ -55,7 +53,7 @@ public class StudentDAOImpl implements StudentDAO {
 
 		try {
 
-			session = factory().openSession();
+			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
 			session.remove(student);
@@ -76,7 +74,6 @@ public class StudentDAOImpl implements StudentDAO {
 				session.close();
 			}
 		}
-
 	}
 
 	public void updateStudent(Student student) {
@@ -85,7 +82,7 @@ public class StudentDAOImpl implements StudentDAO {
 
 		try {
 
-			session = factory().openSession();
+			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
 			session.update(student);
@@ -115,15 +112,15 @@ public class StudentDAOImpl implements StudentDAO {
 
 		try {
 
-			session = factory().openSession();
+			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
 			CriteriaBuilder construtor = session.getCriteriaBuilder();
 
 			CriteriaQuery<Student> criteria = construtor.createQuery(Student.class);
-			Root<Student> raizCliente = criteria.from(Student.class);
+			Root<Student> rootCustomer = criteria.from(Student.class);
 
-			criteria.select(raizCliente);
+			criteria.select(rootCustomer);
 
 			student = session.createQuery(criteria).getResultList();
 

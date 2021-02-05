@@ -6,7 +6,7 @@ import model.entity.profile.Profile;
 import model.factory.connection.ConnectionFactory;
 
 public class ProfileDAOImpl implements ProfileDAO {
-	
+
 	private ConnectionFactory factory;
 
 	public ProfileDAOImpl() {
@@ -15,16 +15,16 @@ public class ProfileDAOImpl implements ProfileDAO {
 	}
 
 	public void insertProfile(Profile profile) {
-		
+
 		Session session = null;
 
 		try {
 
-			session = factory().openSession();
+			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
 			session.save(profile);
-			
+
 			session.getTransaction().commit();
 
 		} catch (Exception sqlException) {
@@ -41,16 +41,15 @@ public class ProfileDAOImpl implements ProfileDAO {
 				session.close();
 			}
 		}
-
 	}
 
 	public void deleteProfile(Profile profile) {
-		
+
 		Session session = null;
 
 		try {
 
-			session = factory().openSession();
+			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
 			session.remove(profile);
@@ -71,16 +70,15 @@ public class ProfileDAOImpl implements ProfileDAO {
 				session.close();
 			}
 		}
-
 	}
 
 	public void updateProfile(Profile profile) {
-		
+
 		Session session = null;
 
 		try {
 
-			session = factory().openSession();
+			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
 			session.update(profile);
@@ -102,5 +100,4 @@ public class ProfileDAOImpl implements ProfileDAO {
 			}
 		}
 	}
-
 }
