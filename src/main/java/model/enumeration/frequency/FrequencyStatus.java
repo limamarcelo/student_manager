@@ -1,4 +1,4 @@
-package model.enume.freqency;
+package model.enumeration.frequency;
 
 public enum FrequencyStatus {
 
