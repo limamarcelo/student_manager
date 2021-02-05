@@ -77,8 +77,4 @@ public class Course {
 	public void setSubjects(List<Subject> subjects) {
 		this.subjects = subjects;
 	}
-	
-	
-	
-	
 }
