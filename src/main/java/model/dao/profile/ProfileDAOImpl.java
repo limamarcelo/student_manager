@@ -1,11 +1,18 @@
 package model.dao.profile;
 
+import org.hibernate.Session;
+
+import model.entity.profile.Profile;
+import model.factory.connection.ConnectionFactory;
+
 public class ProfileDAOImpl implements ProfileDAO {
 	
 	private ConnectionFactory factory;
 
 	public ProfileDAOImpl() {
+		
 		factory = new ConnectionFactory();
+	}
 
 	public void insertProfile(Profile profile) {
 		
@@ -95,5 +102,5 @@ public class ProfileDAOImpl implements ProfileDAO {
 			}
 		}
 	}
-}
+
 }
