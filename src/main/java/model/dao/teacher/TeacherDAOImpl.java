@@ -2,6 +2,10 @@ package model.dao.teacher;
 
 import java.util.List;
 
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
+
 import org.hibernate.Session;
 
 import model.entity.teacher.Teacher;
@@ -103,7 +107,42 @@ public class TeacherDAOImpl implements TeacherDAO {
 	}
 
 	public List<Teacher> listTeacher() {
-		// TODO Auto-generated method stub
-		return null;
+
+		Session session = null;
+		List<Teacher> subject = null;
+
+		try {
+
+			session = factory.getConnection().openSession();
+			session.beginTransaction();
+
+			CriteriaBuilder construtor = session.getCriteriaBuilder();
+
+			CriteriaQuery<Teacher> criteria = construtor.createQuery(Teacher.class);
+			Root<Teacher> rootCustomer = criteria.from(Teacher.class);
+
+			criteria.select(rootCustomer);
+
+			subject = session.createQuery(criteria).getResultList();
+
+			session.getTransaction().commit();
+
+		} catch (Exception sqlException) {
+
+			sqlException.printStackTrace();
+
+			if (session.getTransaction() != null) {
+				session.getTransaction().rollback();
+			}
+
+		} finally {
+
+			if (session != null) {
+				session.close();
+			}
+		}
+
+		return subject;
+
 	}
 }
