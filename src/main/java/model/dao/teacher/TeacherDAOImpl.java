@@ -1,12 +1,11 @@
-package model.dao.teacher;
-
-import java.util.List;
+configuration.addAnnotatedClass(model.entity.subject.Subject.class);package model.dao.teacher;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
 import org.hibernate.Session;
+import org.hibernate.mapping.List;
 
 import model.entity.teacher.Teacher;
 import model.factory.connection.ConnectionFactory;
