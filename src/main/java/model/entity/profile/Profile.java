@@ -15,7 +15,7 @@ public class Profile {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long idProfile;
+	private Long id;
 	
 	@Column(name = "login_profile", length = 20, nullable = false, unique = true)
 	private String login;
@@ -45,12 +45,12 @@ public class Profile {
 		this.password = password;
 	}
 
-	public long getIdProfile() {
-		return idProfile;
+	public Long getId() {
+		return id;
 	}
 
-	public void setIdProfile(long idProfile) {
-		this.idProfile = idProfile;
+	public void setId(Long id) {
+		this.id= id;
 	}
 
 }
