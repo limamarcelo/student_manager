@@ -1,11 +1,11 @@
 package model.dao.user;
 
-import antlr.collections.List;
+import java.util.List;
 import model.entity.user.User;
 
 public interface UserDAO {
 
-	void insertTeaher(User user);
+	void insertUser(User user);
 	
 	void removeUser(User user);
 	
