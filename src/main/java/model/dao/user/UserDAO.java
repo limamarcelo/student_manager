@@ -1,6 +1,6 @@
 package model.dao.user;
+import java.util.List;
 
-import antlr.collections.List;
 import model.entity.user.User;
 
 public interface UserDAO {
@@ -12,6 +12,4 @@ public interface UserDAO {
 	void updateUser(User user);
 	
 	List<User> listUser();
-	
-	
 }
