@@ -1,7 +1,5 @@
 package model.entity.company;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,9 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "company")
-public class Company implements Serializable {
-	
-	private static final Long serialVersionUID = 1L;
+public class Company {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,42 +17,41 @@ public class Company implements Serializable {
 	private Long id;
 
 	@Column(name = "name_company", length = 40, nullable = false, unique = false)
-	private String name_company;
+	private String name;
 	
 	@Column(name = "cnpj_company", length = 18, nullable = false, unique = false)
-	private String cnpj_company;
+	private String cnpj;
 	
 	@Column(name = "email= company", length = 40, nullable = false, unique = false)
-	private String email_company;
+	private String email;
 	
 	@Column(name = "address_company", length = 40, nullable = false, unique = false)
-	private String address_company;
+	private String address;
 	
 	@Column(name = "phone_company", length = 15, nullable = false, unique = false)
-	private Long phone_company;
+	private Long phone;
 	
 	public Company() {}
 
-	public Company(Long id, String name_company, String cnpj_company, String email_company,
-			String address_company, Long phone_company) {
+	public Company(Long id, String name, String cnpj, String email,
+			String address, Long phone) {
 
 		setId(id);
-		setName_company(name_company);
-		setCnpj_company(cnpj_company);
-		setEmail_company(email_company);
-		setAddress_company(address_company);
-		setPhone_company(phone_company);
+		setName(name);
+		setCnpj(cnpj);
+		setEmail(email);
+		setAddress(address);
+		setPhone(phone);
 
 	}
 
-	public Company(String name_company, String cnpj_company, String email_company, String address_company,
-			Long phone_company) {
+	public Company(String name, String cnpj, String email, String address, Long phone) {
 
-		setName_company(name_company);
-		setCnpj_company(cnpj_company);
-		setEmail_company(email_company);
-		setAddress_company(address_company);
-		setPhone_company(phone_company);
+		setName(name);
+		setCnpj(cnpj);
+		setEmail(email);
+		setAddress(address);
+		setPhone(phone);
 
 	}
 
@@ -68,43 +63,43 @@ public class Company implements Serializable {
 		this.id = id;
 	}
 
-	public String getName_company() {
-		return name_company;
+	public String getName() {
+		return name;
 	}
 
-	public void setName_company(String name_company) {
-		this.name_company = name_company;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getCnpj_company() {
-		return cnpj_company;
+	public String getCnpj() {
+		return cnpj;
 	}
 
-	public void setCnpj_company(String cnpj_company) {
-		this.cnpj_company = cnpj_company;
+	public void setCnpj(String cnpj) {
+		this.cnpj = cnpj;
 	}
 
-	public String getEmail_company() {
-		return email_company;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setEmail_company(String email_company) {
-		this.email_company = email_company;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public String getAddress_company() {
-		return address_company;
+	public String getAddress() {
+		return address;
 	}
 
-	public void setAddress_company(String address_company) {
-		this.address_company = address_company;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
-	public Long getPhone_company() {
-		return phone_company;
+	public Long getPhone() {
+		return phone;
 	}
 
-	public void setPhone_company(Long phone_company) {
-		this.phone_company = phone_company;
+	public void setPhone(Long phone) {
+		this.phone = phone;
 	}
 }
