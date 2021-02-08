@@ -1,4 +1,6 @@
-package model.dao.user;
+package model.dao.frequency;
+
+import java.util.List;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -6,28 +8,28 @@ import javax.persistence.criteria.Root;
 
 import org.hibernate.Session;
 
-import java.util.List;
-import model.entity.user.User;
-import model.factory.connection.ConnectionFactory;
+import model.entity.frequency.Frequency;
+import model.factory.connection.ConnectionFactory;S
 
-public class UserDAOImpl implements UserDAO {
-	
+public class FrequencyDAOImpl implements FrequencyDAO {
+
 	private ConnectionFactory factory;
 
-	public UserDAOImpl() {
+	public FrequencyDAOImpl() {
 		factory = new ConnectionFactory();
+		
 	}
 	
-	public void insertUser(User user) {
-
+	public void insertFrequency(Frequency frequency) {
+		
 		Session session = null;
 
 		try {
 
-			session = factory.getConnection().openSession();
+			session = factory().openSession();
 			session.beginTransaction();
 
-			session.save(user);
+			session.save(frequency);
 			
 			session.getTransaction().commit();
 
@@ -45,18 +47,49 @@ public class UserDAOImpl implements UserDAO {
 				session.close();
 			}
 		}
+
 	}
 
-	public void removeUser(User user) {
-
+	public void removeFrequency(Frequency frequency) {
+		
 		Session session = null;
 
 		try {
 
-			session = factory.getConnection().openSession();
+			session = factory().openSession();
 			session.beginTransaction();
 
-			session.remove(user);
+			session.remove(frequency);
+
+			session.getTransaction().commit();
+
+		} catch (Exception sqlException) {
+
+			sqlException.printStackTrace();
+
+			if (session.getTransaction() != null) {
+				session.getTransaction().rollback();
+			}
+
+		} finally {
+
+			if (session != null) {
+				session.close();
+			}
+		}
+
+	}
+
+	public void updateFrequency(Frequency frequency) {
+		
+		Session session = null;
+
+		try {
+
+			session = factory().openSession();
+			session.beginTransaction();
+
+			session.update(frequency);
 
 			session.getTransaction().commit();
 
@@ -75,50 +108,21 @@ public class UserDAOImpl implements UserDAO {
 			}
 		}
 	}
-
-	public void updateUser(User user) {
+	
+	public List<Frequency> listFrequency() {
 
 		Session session = null;
+		List<Frequency> user = null;
 
 		try {
 
-			session = factory.getConnection().openSession();
-			session.beginTransaction();
-
-			session.update(user);
-
-			session.getTransaction().commit();
-
-		} catch (Exception sqlException) {
-
-			sqlException.printStackTrace();
-
-			if (session.getTransaction() != null) {
-				session.getTransaction().rollback();
-			}
-
-		} finally {
-
-			if (session != null) {
-				session.close();
-			}
-		}
-	}
-
-	public List<User> listUser() {
-
-		Session session = null;
-		List<User> user = null;
-
-		try {
-
-			session = factory.getConnection().openSession();
+			session = factory().openSession();
 			session.beginTransaction();
 
 			CriteriaBuilder construtor = session.getCriteriaBuilder();
 
-			CriteriaQuery<User> criteria = construtor.createQuery(User.class);
-			Root<User> rootCustomer = criteria.from(User.class);
+			CriteriaQuery<Frequency> criteria = construtor.createQuery(Frequency.class);
+			Root<Frequency> rootCustomer = criteria.from(Frequency.class);
 
 			criteria.select(rootCustomer);
 

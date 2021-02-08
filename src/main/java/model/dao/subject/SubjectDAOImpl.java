@@ -11,24 +11,24 @@ import model.entity.subject.Subject;
 import model.factory.connection.ConnectionFactory;
 
 public class SubjectDAOImpl implements SubjectDAO {
-	
+
 	private ConnectionFactory factory;
 
 	public SubjectDAOImpl() {
 		factory = new ConnectionFactory();
 	}
-	
+
 	public void insertSubject(Subject subject) {
 
 		Session session = null;
 
 		try {
 
-			session = factory().openSession();
+			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
 			session.save(subject);
-			
+
 			session.getTransaction().commit();
 
 		} catch (Exception sqlException) {
@@ -45,7 +45,6 @@ public class SubjectDAOImpl implements SubjectDAO {
 				session.close();
 			}
 		}
-
 	}
 
 	public void removeSubject(Subject subject) {
@@ -54,7 +53,7 @@ public class SubjectDAOImpl implements SubjectDAO {
 
 		try {
 
-			session = factory().openSession();
+			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
 			session.remove(subject);
@@ -75,7 +74,6 @@ public class SubjectDAOImpl implements SubjectDAO {
 				session.close();
 			}
 		}
-
 	}
 
 	public void updateSubject(Subject subject) {
@@ -84,7 +82,7 @@ public class SubjectDAOImpl implements SubjectDAO {
 
 		try {
 
-			session = factory().openSession();
+			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
 			session.update(subject);
@@ -114,15 +112,15 @@ public class SubjectDAOImpl implements SubjectDAO {
 
 		try {
 
-			session = factory().openSession();
+			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
 			CriteriaBuilder construtor = session.getCriteriaBuilder();
 
 			CriteriaQuery<Subject> criteria = construtor.createQuery(Subject.class);
-			Root<Subject> raizCliente = criteria.from(Subject.class);
+			Root<Subject> rootCustomer = criteria.from(Subject.class);
 
-			criteria.select(raizCliente);
+			criteria.select(rootCustomer);
 
 			subject = session.createQuery(criteria).getResultList();
 

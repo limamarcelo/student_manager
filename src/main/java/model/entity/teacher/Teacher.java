@@ -24,7 +24,7 @@ public class Teacher {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_teacher")
 	private Long id;
-
+	
 	@Column(name = "name_teacher", length = 25, nullable = false, unique = false)
 	private String name;
 
@@ -47,7 +47,12 @@ public class Teacher {
 
 	}
 
+
 	public Teacher(int id, String name, String cpf, String email, List<Subject> subjects) {
+
+	
+	public Teacher(Long id, String name, String cpf, String email, String subject) {
+
 		setId(id);
 		setName(name);
 		setCpf(cpf);
@@ -55,11 +60,19 @@ public class Teacher {
 
 	}
 
+
 	public int getId() {
 		return id;
 	}
 
 	public void setId(int id) {
+
+	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+
 		this.id = id;
 	}
 

@@ -16,5 +16,7 @@
 		<mapping class= "model.entity.teacher.Teacher"/>
 		<mapping class= "model.entity.course.Course"/>
 		<mapping class= "model.entity.student.Student"/>
+		<mapping class= "model.entity.frequency.Frequency"/>
+		<mapping class= "model.enumeration.frequency.FrequencyStatus"/>
 	</session-factory>
 </hibernate-configuration>

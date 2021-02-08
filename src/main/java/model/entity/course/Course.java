@@ -72,13 +72,14 @@ public class Course {
 		this.name = name;
 	}
 
-	public Subject getSubject() {
-		return subject;
+	public List<Subject> getSubjects() {
+		return subjects;
 	}
 
-	public void setSubject(Subject subject) {
-		this.subject = subject;
+	public void setSubjects(List<Subject> subjects) {
+		this.subjects = subjects;
 	}
+
 
 	public void addSubject(Subject subject) {
 		subject.add(subject);
@@ -90,3 +91,6 @@ public class Course {
 
 
 }
+
+
+

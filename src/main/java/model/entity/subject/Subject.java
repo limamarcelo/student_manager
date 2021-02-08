@@ -17,7 +17,7 @@ public class Subject {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_subject")
-	private Long id_subject;
+	private Long id;
 	
 	
 	@Column(name = "name_subject", length = 40, nullable = false, unique = false)
@@ -26,9 +26,9 @@ public class Subject {
 	
 	public Subject() {}
 
-	public Subject(Long id_subject, String name_subject, Long teacher_subject) {
+	public Subject(Long id, String name_subject, Long teacher_subject) {
 
-		setId_subject(id_subject);
+		setId(id);
 		setName_subject(name_subject);
 		setTeacher_subject(teacher_subject);
 
@@ -41,12 +41,12 @@ public class Subject {
 
 	}
 
-	public void setId_subject(Long id_subject) {
-		this.id_subject = id_subject;
+	public void setId(Long id) {
+		this.id = id;
 	}
 	
-	public Long getId_subject() {
-		return id_subject;
+	public Long getId() {
+		return id;
 	}
 
 	public void setName_subject(String name_subject) {
