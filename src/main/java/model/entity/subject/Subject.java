@@ -11,10 +11,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "subject")
-public class Subject implements Serializable {
+public class Subject {
 
-	
-	private static final Long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,9 +23,6 @@ public class Subject implements Serializable {
 	@Column(name = "name_subject", length = 40, nullable = false, unique = false)
 	private String name_subject;
 	
-	
-	@Column(name = "teacher_subject")
-	private Long teacher_subject;
 	
 	public Subject() {}
 
