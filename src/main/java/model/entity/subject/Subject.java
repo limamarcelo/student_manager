@@ -12,6 +12,7 @@ import javax.persistence.Table;
 @Table(name = "subject")
 public class Subject {
 
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_subject")
@@ -22,6 +23,7 @@ public class Subject {
 	private String name;
 	
 	
+
 	@Column(name = "teacher_subject")
 	private Long teacher;
 	

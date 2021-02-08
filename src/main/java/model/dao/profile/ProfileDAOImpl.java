@@ -100,4 +100,8 @@ public class ProfileDAOImpl implements ProfileDAO {
 			}
 		}
 	}
+<<<<<<< HEAD
+
+=======
+>>>>>>> 427ced2b1d3365e9817aa8469926f48581abdcb5
 }
