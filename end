@@ -1,0 +1,104 @@
+[33mcommit a0154938948cd89a92a815d07ccea541c4d2ad71[m[33m ([m[1;36mHEAD -> [m[1;32mtrf-03[m[33m, [m[1;31morigin/trf-03[m[33m, [m[1;32mtrf-02[m[33m)[m
+Author: 1gui <guilherme76.gm@gmail.com>
+Date:   Thu Jan 28 16:39:06 2021 -0300
+
+    add class conection
+
+[33mcommit 0209d6291398ee37af3213f2aea43745344a561b[m[33m ([m[1;31morigin/trf-02[m[33m, [m[1;32mdev[m[33m)[m
+Author: 1gui <guilherme76.gm@gmail.com>
+Date:   Thu Jan 28 16:11:58 2021 -0300
+
+    trf-02-Matheus
+
+[33mcommit cd2ce114f8ff661566ee3b43b448b78841abc934[m[33m ([m[1;31morigin/dev[m[33m)[m
+Author: 1gui <guilherme76.gm@gmail.com>
+Date:   Tue Jan 26 15:47:58 2021 -0300
+
+    test
+
+[33mcommit 024790df7bd7a8c21d71cf421d54684b0b0cbada[m[33m ([m[1;32mmain[m[33m)[m
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Wed Jan 20 07:46:32 2021 -0300
+
+    removed .project
+
+[33mcommit b27dfa40857205640948a6643d093ac8203691cd[m
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Wed Jan 20 07:41:48 2021 -0300
+
+    removed target/ .settings and .classpath
+
+[33mcommit 53542f0988376e548a49251702715d0edf310816[m
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Wed Jan 20 07:37:12 2021 -0300
+
+    add .gitignore
+
+[33mcommit dc8384d60863319ab7316a0df3578a112bfa8b63[m
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Wed Jan 20 07:34:05 2021 -0300
+
+    removed target/
+
+[33mcommit a2a70f410474e72497ba6fd09d49d0d139100e62[m
+Merge: e075cce 9c4f079
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Thu Jan 14 16:35:49 2021 -0300
+
+    Merge pull request #2 from 1gui/main
+    
+    Update Main.java
+
+[33mcommit e075cce97a8d16db067e4c7dcba2b0c4820256f8[m
+Author: Marcelo Miranda <miranda.rs@gmail.com>
+Date:   Thu Jan 14 16:21:48 2021 -0300
+
+    Modified form of connection in TeacherDAO and Added Connection Factory
+
+[33mcommit 9c4f079599865d7145157cfb47626eb6ccbfff62[m
+Author: 1gui <75639718+1gui@users.noreply.github.com>
+Date:   Tue Jan 12 18:15:57 2021 -0300
+
+    Update Main.java
+
+[33mcommit 26db84fbd168f527b747b91ec0514684db6900d1[m
+Merge: b5a309f b40aa55
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Tue Jan 12 18:10:10 2021 -0300
+
+    Merge pull request #1 from 1gui/main
+    
+    Merge pull request #1 from limamarcelo/main
+
+[33mcommit b40aa55f9abffbd905152b17b9a5679ff4a8ea3a[m
+Merge: 1a1c655 b5a309f
+Author: 1gui <75639718+1gui@users.noreply.github.com>
+Date:   Tue Jan 12 18:04:24 2021 -0300
+
+    Merge pull request #1 from limamarcelo/main
+    
+    teste
+
+[33mcommit b5a309f3f7a787a1021c9567d58a32f6b0a01ce1[m
+Author: Marcelo Miranda <miranda.rs@gmail.com>
+Date:   Tue Jan 12 17:49:12 2021 -0300
+
+    deletado arquivo de teste
+
+[33mcommit 855e0147343ed52abcb6adcec052c1c541221531[m
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Tue Jan 12 17:28:34 2021 -0300
+
+    Create README.md
+
+[33mcommit 07b7b2fb328e6db48bab06503764e16c7594fb20[m
+Author: Marcelo Miranda <miranda.rs@gmail.com>
+Date:   Tue Jan 12 17:04:58 2021 -0300
+
+    Teste
+
+[33mcommit 1a1c65571c7c821b3b6f948fb230857d520f67dd[m
+Author: Marcelo Miranda <miranda.rs@gmail.com>
+Date:   Tue Jan 12 15:20:54 2021 -0300
+
+    Projeto Criado

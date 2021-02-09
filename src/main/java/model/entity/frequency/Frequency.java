@@ -3,7 +3,6 @@ package model.entity.frequency;
 import java.util.Date;
 
 import javax.persistence.Column;
-import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -24,9 +23,8 @@ public class Frequency {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@ElementCollection(targetClass = FrequencyStatus.class)
 	@Column(name = "status_frequency", nullable = false)
-	@Enumerated(EnumType.ORDINAL)
+	@Enumerated(EnumType.STRING)
 	private FrequencyStatus status;
 	
 

@@ -12,8 +12,6 @@ public interface CourseDAO {
 	
 	void updateCourse(Course course);
 	
-	void insert
-	
 	List<Course> listCourse();
 
 	
