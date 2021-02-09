@@ -1,14 +1,12 @@
 package model.dao.course;
 
-import java.util.List;
-
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
 import org.hibernate.Session;
+import org.hibernate.mapping.List;
 
-import org.hibernate.Session;
 import model.entity.course.Course;
 import model.factory.connection.ConnectionFactory;
 
@@ -49,25 +47,8 @@ public class CourseDAOImpl implements CourseDAO {
 		}
 	}
 
+	
 	public void removeCourse(Course course) {
-
-		Session session = null;
-
-		try {
-
-			session = factory.getConnection().openSession();
-			session.beginTransaction();
-
-			session.remove(course);
-
-
-	private ConnectionFactory factory;
-	
-	public CourseDAOImpl() {
-		factory = new ConnectionFactory();
-	}
-	
-	public void insertCourse(Course course) {
 		
 		Session session = null;
 		
@@ -76,7 +57,7 @@ public class CourseDAOImpl implements CourseDAO {
 			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
-			session.save(course);
+			session.remove(course);
 
 
 			session.getTransaction().commit();
