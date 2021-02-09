@@ -109,7 +109,7 @@ public class TeacherDAOImpl implements TeacherDAO {
 	public List<Teacher> listTeacher() {
 
 		Session session = null;
-		List<Teacher> subject = null;
+		List<Teacher> teacher = null;
 
 		try {
 
@@ -123,7 +123,7 @@ public class TeacherDAOImpl implements TeacherDAO {
 
 			criteria.select(rootCustomer);
 
-			subject = session.createQuery(criteria).getResultList();
+			teacher = session.createQuery(criteria).getResultList();
 
 			session.getTransaction().commit();
 
@@ -142,7 +142,7 @@ public class TeacherDAOImpl implements TeacherDAO {
 			}
 		}
 
-		return subject;
+		return teacher;
 
 	}
 }

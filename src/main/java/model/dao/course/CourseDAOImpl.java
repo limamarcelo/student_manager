@@ -8,11 +8,12 @@ import javax.persistence.criteria.Root;
 
 import org.hibernate.Session;
 
+import org.hibernate.Session;
 import model.entity.course.Course;
 import model.factory.connection.ConnectionFactory;
 
 public class CourseDAOImpl implements CourseDAO {
-	
+  
 	private ConnectionFactory factory;
 
 	public CourseDAOImpl() {
@@ -59,6 +60,25 @@ public class CourseDAOImpl implements CourseDAO {
 
 			session.remove(course);
 
+
+	private ConnectionFactory factory;
+	
+	public CourseDAOImpl() {
+		factory = new ConnectionFactory();
+	}
+	
+	public void insertCourse(Course course) {
+		
+		Session session = null;
+		
+		try {
+			
+			session = factory.getConnection().openSession();
+			session.beginTransaction();
+
+			session.save(teacher);
+
+
 			session.getTransaction().commit();
 
 		} catch (Exception sqlException) {
@@ -76,6 +96,7 @@ public class CourseDAOImpl implements CourseDAO {
 			}
 		}
 	}
+
 
 	public void updateCourse(Course course) {
 	
@@ -146,3 +167,6 @@ public class CourseDAOImpl implements CourseDAO {
 
 	}	
 }
+
+
+	
