@@ -1,0 +1,330 @@
+[33mcommit 5f9f2206ec7753120fef6d6c573043d707384d06[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 036a274 3bed928
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Thu Feb 4 16:36:23 2021 -0300
+
+    Merge pull request #17 from limamarcelo/trf-15
+    
+    Trf-15
+
+[33mcommit 3bed92876598af19af7420e808945b626f9ebc31[m[33m ([m[1;31morigin/trf-15[m[33m)[m
+Author: Dimpeny <guilhermezimermann.grz@gmail.com>
+Date:   Thu Feb 4 16:27:11 2021 -0300
+
+    Changed all 'long' to 'Long' in Subject.java
+
+[33mcommit 036a274fc1a739571121fbcfccbe2523fa1838db[m
+Merge: 15f7bb5 49778b3
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Thu Feb 4 16:26:45 2021 -0300
+
+    Merge pull request #16 from limamarcelo/trf-14
+    
+    Changed List import from 'antlr.collections' to 'java.util' in Teache…
+
+[33mcommit 0ecb617e0869e315f9427a613b5dfaa8998c6034[m
+Author: Dimpeny <guilhermezimermann.grz@gmail.com>
+Date:   Thu Feb 4 16:26:37 2021 -0300
+
+    Changed all 'long' to 'Long' in Company.java
+
+[33mcommit 49778b38a427595ed4f54d71374f89682eebaad2[m[33m ([m[1;31morigin/trf-14[m[33m)[m
+Author: Dimpeny <guilhermezimermann.grz@gmail.com>
+Date:   Thu Feb 4 16:18:56 2021 -0300
+
+    Changed List import from 'antlr.collections' to 'java.util' in TeacherDAO
+
+[33mcommit 15f7bb5c1957bad8bd12d061d168f5a1e2b8152e[m[33m ([m[1;31morigin/dev[m[33m, [m[1;32mdev[m[33m)[m
+Merge: 64498bf e6dc116
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Thu Feb 4 16:11:54 2021 -0300
+
+    Merge pull request #15 from limamarcelo/trf-08
+    
+    DAO Class Profile
+
+[33mcommit e6dc116e9bc2f5a4f470c60bc98e880695eef1a0[m[33m ([m[1;31morigin/trf-08[m[33m)[m
+Author: 1gui <guilherme76.gm@gmail.com>
+Date:   Thu Feb 4 16:08:52 2021 -0300
+
+    DAO Class Profile
+
+[33mcommit 64498bf2c777ca279e50cc5b982bd7203955dd0e[m
+Merge: 57c21cd 0e5f962
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Thu Feb 4 16:02:13 2021 -0300
+
+    Merge pull request #14 from limamarcelo/trf-11
+    
+    Created DAO classes for User
+
+[33mcommit 0e5f962186301ec405e073f90ae2106cf30c0484[m[33m ([m[1;31morigin/trf-11[m[33m)[m
+Author: Dimpeny <guilhermezimermann.grz@gmail.com>
+Date:   Thu Feb 4 15:58:33 2021 -0300
+
+    Created DAO classes for User
+
+[33mcommit 57c21cd56163caa6872e1022618fb2c4c26ed2b2[m
+Merge: 1af2bdd acf2b44
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Thu Feb 4 15:30:18 2021 -0300
+
+    Merge pull request #13 from limamarcelo/developer
+    
+    Merge pull request #8 from limamarcelo/trf-04
+
+[33mcommit 1af2bdd544a640d8ccb3878eafbcc9f49b6b1bf5[m
+Merge: 99d30e8 8c15410
+Author: 1gui <75639718+1gui@users.noreply.github.com>
+Date:   Thu Feb 4 15:26:35 2021 -0300
+
+    Merge pull request #12 from limamarcelo/trf-06
+    
+    Criate class profile
+
+[33mcommit 8c1541021124238bcdf1341ba9f6d2df17441835[m[33m ([m[1;31morigin/trf-06[m[33m)[m
+Author: 1gui <guilherme76.gm@gmail.com>
+Date:   Thu Feb 4 15:24:59 2021 -0300
+
+    Criate class profile
+
+[33mcommit acf2b4481036cc78e4221460cfc17d104da32ad4[m
+Merge: cd2ce11 ad85f5d
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Thu Feb 4 15:24:37 2021 -0300
+
+    Merge pull request #8 from limamarcelo/trf-04
+    
+    Trf 04
+
+[33mcommit 99d30e897d1bb293a19dd50f6a9fde3c0008c521[m
+Merge: 095a8c2 3616427
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Thu Feb 4 05:07:26 2021 -0300
+
+    Merge pull request #11 from limamarcelo/trf-07
+    
+    Trf 07
+
+[33mcommit 361642761956dfa230e41c47b04f9ce18ea39c85[m[33m ([m[1;31morigin/trf-07[m[33m)[m
+Author: Dimpeny <guilhermezimermann.grz@gmail.com>
+Date:   Wed Feb 3 14:02:15 2021 -0300
+
+    Created StudentDAO and StudentDAOImpl
+
+[33mcommit fa16af61a195d70d42ae6bbb0f9692175c8ed989[m
+Author: Dimpeny <guilhermezimermann.grz@gmail.com>
+Date:   Wed Feb 3 14:00:37 2021 -0300
+
+    Change List to java.util.List on SubjectDAOImpl
+
+[33mcommit 689a2d0f8e65c34a0f31a6758412d338c44def32[m
+Author: Dimpeny <guilhermezimermann.grz@gmail.com>
+Date:   Wed Feb 3 13:59:47 2021 -0300
+
+    Changed List to java.util.List on CompanyDAOImpl
+
+[33mcommit 095a8c213a7ad1deec4524d64a0da1f75dd882d1[m
+Merge: 4c3fbff 7c2cc59
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Tue Feb 2 17:38:45 2021 -0300
+
+    Merge pull request #9 from limamarcelo/trf-01
+    
+    Trf 01
+
+[33mcommit 4c3fbff498e4922f6ded9c8a4dbc51438f2615c5[m
+Merge: 6f29b8a 8326e65
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Tue Feb 2 17:30:54 2021 -0300
+
+    Merge pull request #10 from limamarcelo/trf-05
+    
+    Changed 'int' to 'Long' on all constructor variables 'id'.
+
+[33mcommit 8326e65e351dd07a47f69f39ad03479652d1422c[m[33m ([m[1;31morigin/trf-05[m[33m)[m
+Author: Dimpeny <guilhermezimermann.grz@gmail.com>
+Date:   Mon Feb 1 13:42:19 2021 -0300
+
+    Changed 'int' to 'Long' on all constructor variables 'id'.
+
+[33mcommit 6f29b8ae021d5b90c1e850896b2765d8a1fa40b7[m
+Merge: 2e4e090 ad85f5d
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Thu Jan 28 17:04:20 2021 -0300
+
+    Merge pull request #7 from limamarcelo/trf-04
+    
+    Trf 04
+
+[33mcommit 2e4e090356d2b4cb86cac09e0dc9b613296f625d[m
+Merge: 314571d a015493
+Author: 1gui <75639718+1gui@users.noreply.github.com>
+Date:   Thu Jan 28 16:42:03 2021 -0300
+
+    Merge pull request #6 from limamarcelo/trf-03
+    
+    add class conection
+
+[33mcommit a0154938948cd89a92a815d07ccea541c4d2ad71[m[33m ([m[1;31morigin/trf-03[m[33m)[m
+Author: 1gui <guilherme76.gm@gmail.com>
+Date:   Thu Jan 28 16:39:06 2021 -0300
+
+    add class conection
+
+[33mcommit ad85f5da8492d013cf9f6b092267bb78bc9a33c0[m[33m ([m[1;31morigin/trf-04[m[33m)[m
+Merge: 6a7cefc 314571d
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Thu Jan 28 16:35:57 2021 -0300
+
+    Merge branch 'main' of https://github.com/limamarcelo/student_manager into dev
+
+[33mcommit 314571d650da20c0f4c11e9daa562c666cd4b128[m
+Merge: 58d6806 0209d62
+Author: 1gui <75639718+1gui@users.noreply.github.com>
+Date:   Thu Jan 28 16:27:45 2021 -0300
+
+    Merge pull request #5 from limamarcelo/trf-02
+    
+    Trf 02
+
+[33mcommit 6a7cefc5f7e37e809538702ae4acefe62244c549[m
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Thu Jan 28 16:16:24 2021 -0300
+
+    add Program.java
+
+[33mcommit 0209d6291398ee37af3213f2aea43745344a561b[m[33m ([m[1;31morigin/trf-02[m[33m)[m
+Author: 1gui <guilherme76.gm@gmail.com>
+Date:   Thu Jan 28 16:11:58 2021 -0300
+
+    trf-02-Matheus
+
+[33mcommit 7c2cc595cba27357532ff6c897093924a4381c44[m[33m ([m[1;31morigin/trf-01[m[33m)[m
+Merge: 4666709 cd2ce11
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Tue Jan 26 17:16:57 2021 -0300
+
+    Merge pull request #4 from limamarcelo/dev
+    
+    test
+
+[33mcommit 58d680692f2099dee9ec59ce178ff938c293572b[m
+Merge: bfe209c 4666709
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Tue Jan 26 17:14:26 2021 -0300
+
+    Merge pull request #3 from limamarcelo/trf-01
+    
+    Trf 01
+
+[33mcommit bfe209c01ad15c6a970c135348944455909e301e[m
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Tue Jan 26 17:00:29 2021 -0300
+
+    ajust gitignore ignore target
+
+[33mcommit cd2ce114f8ff661566ee3b43b448b78841abc934[m
+Author: 1gui <guilherme76.gm@gmail.com>
+Date:   Tue Jan 26 15:47:58 2021 -0300
+
+    test
+
+[33mcommit 4666709f36bcfe882381272963afad30e59571dd[m
+Author: Dimpeny <guilhermezimermann.grz@gmail.com>
+Date:   Tue Jan 26 13:09:15 2021 -0300
+
+    Annotated Course class
+
+[33mcommit 612c8f0c353df238517d89341c902d12a94c042c[m
+Author: Dimpeny <guilhermezimermann.grz@gmail.com>
+Date:   Tue Jan 26 13:08:31 2021 -0300
+
+    Annotated Student class
+
+[33mcommit 024790df7bd7a8c21d71cf421d54684b0b0cbada[m
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Wed Jan 20 07:46:32 2021 -0300
+
+    removed .project
+
+[33mcommit b27dfa40857205640948a6643d093ac8203691cd[m
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Wed Jan 20 07:41:48 2021 -0300
+
+    removed target/ .settings and .classpath
+
+[33mcommit 53542f0988376e548a49251702715d0edf310816[m
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Wed Jan 20 07:37:12 2021 -0300
+
+    add .gitignore
+
+[33mcommit dc8384d60863319ab7316a0df3578a112bfa8b63[m
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Wed Jan 20 07:34:05 2021 -0300
+
+    removed target/
+
+[33mcommit a2a70f410474e72497ba6fd09d49d0d139100e62[m
+Merge: e075cce 9c4f079
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Thu Jan 14 16:35:49 2021 -0300
+
+    Merge pull request #2 from 1gui/main
+    
+    Update Main.java
+
+[33mcommit e075cce97a8d16db067e4c7dcba2b0c4820256f8[m
+Author: Marcelo Miranda <miranda.rs@gmail.com>
+Date:   Thu Jan 14 16:21:48 2021 -0300
+
+    Modified form of connection in TeacherDAO and Added Connection Factory
+
+[33mcommit 9c4f079599865d7145157cfb47626eb6ccbfff62[m
+Author: 1gui <75639718+1gui@users.noreply.github.com>
+Date:   Tue Jan 12 18:15:57 2021 -0300
+
+    Update Main.java
+
+[33mcommit 26db84fbd168f527b747b91ec0514684db6900d1[m
+Merge: b5a309f b40aa55
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Tue Jan 12 18:10:10 2021 -0300
+
+    Merge pull request #1 from 1gui/main
+    
+    Merge pull request #1 from limamarcelo/main
+
+[33mcommit b40aa55f9abffbd905152b17b9a5679ff4a8ea3a[m
+Merge: 1a1c655 b5a309f
+Author: 1gui <75639718+1gui@users.noreply.github.com>
+Date:   Tue Jan 12 18:04:24 2021 -0300
+
+    Merge pull request #1 from limamarcelo/main
+    
+    teste
+
+[33mcommit b5a309f3f7a787a1021c9567d58a32f6b0a01ce1[m
+Author: Marcelo Miranda <miranda.rs@gmail.com>
+Date:   Tue Jan 12 17:49:12 2021 -0300
+
+    deletado arquivo de teste
+
+[33mcommit 855e0147343ed52abcb6adcec052c1c541221531[m
+Author: Marcelo Miranda de Lima <miranda.rs@gmail.com>
+Date:   Tue Jan 12 17:28:34 2021 -0300
+
+    Create README.md
+
+[33mcommit 07b7b2fb328e6db48bab06503764e16c7594fb20[m
+Author: Marcelo Miranda <miranda.rs@gmail.com>
+Date:   Tue Jan 12 17:04:58 2021 -0300
+
+    Teste
+
+[33mcommit 1a1c65571c7c821b3b6f948fb230857d520f67dd[m
+Author: Marcelo Miranda <miranda.rs@gmail.com>
+Date:   Tue Jan 12 15:20:54 2021 -0300
+
+    Projeto Criado

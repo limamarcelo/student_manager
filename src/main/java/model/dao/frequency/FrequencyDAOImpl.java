@@ -9,7 +9,7 @@ import javax.persistence.criteria.Root;
 import org.hibernate.Session;
 
 import model.entity.frequency.Frequency;
-import model.factory.connection.ConnectionFactory;S
+import model.factory.connection.ConnectionFactory;
 
 public class FrequencyDAOImpl implements FrequencyDAO {
 
@@ -112,7 +112,7 @@ public class FrequencyDAOImpl implements FrequencyDAO {
 	public List<Frequency> listFrequency() {
 
 		Session session = null;
-		List<Frequency> user = null;
+		List<Frequency> frequency = null;
 
 		try {
 
@@ -126,7 +126,7 @@ public class FrequencyDAOImpl implements FrequencyDAO {
 
 			criteria.select(rootCustomer);
 
-			user = session.createQuery(criteria).getResultList();
+			frequency = session.createQuery(criteria).getResultList();
 
 			session.getTransaction().commit();
 
@@ -145,7 +145,7 @@ public class FrequencyDAOImpl implements FrequencyDAO {
 			}
 		}
 
-		return user;
+		return frequency;
 
 	}
 }
