@@ -50,7 +50,7 @@ public class User{
 		setId(id);
 	}
 	
-	public User(String name, String username, String password, String email, Compaany company, Position position) {
+	public User(String name, String username, String password, String email, Company company, Position position) {
 		setName(name);
 		setUsername(username);
 		setPassword(password);
@@ -59,7 +59,7 @@ public class User{
 		setPosition(position);
 	}
 	
-	public User(Long id, String name, String username, String password, String email, Compaany company, Position position) {
+	public User(Long id, String name, String username, String password, String email, Company company, Position position) {
 		setId(id);
 		setName(name);
 		setUsername(username);
