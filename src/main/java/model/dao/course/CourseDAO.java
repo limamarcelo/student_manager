@@ -2,7 +2,10 @@ package model.dao.course;
 
 import org.hibernate.mapping.List;
 
+import java.util.List;
+
 import model.entity.course.Course;
+
 
 public interface CourseDAO {
 	
@@ -12,9 +15,5 @@ public interface CourseDAO {
 	
 	void updateCourse(Course course);
 	
-	void insert
-	
 	List<Course> listCourse();
-
-	
 }

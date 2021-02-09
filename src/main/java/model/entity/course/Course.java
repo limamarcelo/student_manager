@@ -43,15 +43,15 @@ public class Course {
 		setId(id);
 	}
 
-	public Course(String name, Subject subject) {
+	public Course(String name, Subject subjects) {
 		setName(name);
-		setSubject(subject);
+		setSubjects(subjects);
 	}
 
-	public Course(Long id, String name, Subject subject) {
+	public Course(Long id, String name, Subject subjects) {
 		setId(id);
 		setName(name);
-		setSubject(subject);
+		setSubjects(subjects);
 	}
 
 	// Getters & Setters
