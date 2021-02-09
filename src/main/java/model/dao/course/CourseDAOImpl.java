@@ -76,7 +76,7 @@ public class CourseDAOImpl implements CourseDAO {
 			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
-			session.save(teacher);
+			session.save(course);
 
 
 			session.getTransaction().commit();
