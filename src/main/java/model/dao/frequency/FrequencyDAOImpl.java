@@ -1,12 +1,11 @@
 package model.dao.frequency;
 
-import java.util.List;
-
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
 import org.hibernate.Session;
+import org.hibernate.mapping.List;
 
 import model.entity.frequency.Frequency;
 import model.factory.connection.ConnectionFactory;
@@ -26,7 +25,7 @@ public class FrequencyDAOImpl implements FrequencyDAO {
 
 		try {
 
-			session = factory().openSession();
+			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
 			session.save(frequency);
@@ -56,7 +55,7 @@ public class FrequencyDAOImpl implements FrequencyDAO {
 
 		try {
 
-			session = factory().openSession();
+			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
 			session.remove(frequency);
@@ -86,7 +85,7 @@ public class FrequencyDAOImpl implements FrequencyDAO {
 
 		try {
 
-			session = factory().openSession();
+			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
 			session.update(frequency);
@@ -116,7 +115,7 @@ public class FrequencyDAOImpl implements FrequencyDAO {
 
 		try {
 
-			session = factory().openSession();
+			session = factory.getConnection().openSession();
 			session.beginTransaction();
 
 			CriteriaBuilder construtor = session.getCriteriaBuilder();
